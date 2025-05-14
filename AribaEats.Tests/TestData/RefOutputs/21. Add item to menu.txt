@@ -1,0 +1,83 @@
+Welcome to Arriba Eats!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Tim!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Tim!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Fajitas ($9.99) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+  $9.99  Fajitas
+Please enter the name of the new item (blank to cancel):
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Thank you for using Arriba Eats!

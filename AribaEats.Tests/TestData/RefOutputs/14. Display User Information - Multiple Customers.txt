@@ -1,0 +1,217 @@
+Welcome to Arriba Eats!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a customer, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a customer, Rob O'Shea!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Rob O'Shea!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a customer, Megan O'Donnell!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Megan O'Donnell!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Rob O'Shea!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Your user details are as follows:
+Name: Rob O'Shea
+Age: 31
+Email: rob@example.com
+Mobile: 0491963548
+Location: 3,8
+You've made 0 order(s) and spent a total of $0.00 here.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Your user details are as follows:
+Name: Sam Bowes-Lyon
+Age: 25
+Email: sam@example.com
+Mobile: 0491872936
+Location: 2,1
+You've made 0 order(s) and spent a total of $0.00 here.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Megan O'Donnell!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Your user details are as follows:
+Name: Megan O'Donnell
+Age: 34
+Email: megan@example.com
+Mobile: 0491965387
+Location: 6,1
+You've made 0 order(s) and spent a total of $0.00 here.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Thank you for using Arriba Eats!

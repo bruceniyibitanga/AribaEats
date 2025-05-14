@@ -1,0 +1,270 @@
+Welcome to Arriba Eats!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Tim!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Tim!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Spicy Stracciatella ($14.50) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+ $14.50  Spicy Stracciatella
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Braised Bruschetta ($7.99) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+ $14.50  Spicy Stracciatella
+  $7.99  Braised Bruschetta
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Caprese salad ($12.00) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+ $14.50  Spicy Stracciatella
+  $7.99  Braised Bruschetta
+ $12.00  Caprese salad
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Polenta bianca ($13.99) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+ $14.50  Spicy Stracciatella
+  $7.99  Braised Bruschetta
+ $12.00  Caprese salad
+ $13.99  Polenta bianca
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Breadsticks ($2.00) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a customer, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Tim's Trattoria       4,9    9     Italian     -  
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Placing order from Tim's Trattoria.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Current order total: $0.00
+1:  $14.50  Spicy Stracciatella
+2:   $7.99  Braised Bruschetta
+3:  $12.00  Caprese salad
+4:  $13.99  Polenta bianca
+5:   $2.00  Breadsticks
+6: Complete order
+7: Cancel order
+Please enter a choice between 1 and 7:
+Adding Polenta bianca to order.
+Please enter quantity (0 to cancel):
+Current order total: $0.00
+1:  $14.50  Spicy Stracciatella
+2:   $7.99  Braised Bruschetta
+3:  $12.00  Caprese salad
+4:  $13.99  Polenta bianca
+5:   $2.00  Breadsticks
+6: Complete order
+7: Cancel order
+Please enter a choice between 1 and 7:
+Adding Caprese salad to order.
+Please enter quantity (0 to cancel):
+Added 1 x Caprese salad to order.
+Current order total: $12.00
+1:  $14.50  Spicy Stracciatella
+2:   $7.99  Braised Bruschetta
+3:  $12.00  Caprese salad
+4:  $13.99  Polenta bianca
+5:   $2.00  Breadsticks
+6: Complete order
+7: Cancel order
+Please enter a choice between 1 and 7:
+Adding Braised Bruschetta to order.
+Please enter quantity (0 to cancel):
+Added 2 x Braised Bruschetta to order.
+Current order total: $27.98
+1:  $14.50  Spicy Stracciatella
+2:   $7.99  Braised Bruschetta
+3:  $12.00  Caprese salad
+4:  $13.99  Polenta bianca
+5:   $2.00  Breadsticks
+6: Complete order
+7: Cancel order
+Please enter a choice between 1 and 7:
+Adding Breadsticks to order.
+Please enter quantity (0 to cancel):
+Added 4 x Breadsticks to order.
+Current order total: $35.98
+1:  $14.50  Spicy Stracciatella
+2:   $7.99  Braised Bruschetta
+3:  $12.00  Caprese salad
+4:  $13.99  Polenta bianca
+5:   $2.00  Breadsticks
+6: Complete order
+7: Cancel order
+Please enter a choice between 1 and 7:
+Your order has been placed. Your order number is #1.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Order #1 from Tim's Trattoria: Ordered
+1 x Caprese salad
+2 x Braised Bruschetta
+4 x Breadsticks
+
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Thank you for using Arriba Eats!

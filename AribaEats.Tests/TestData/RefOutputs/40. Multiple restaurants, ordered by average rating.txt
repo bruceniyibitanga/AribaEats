@@ -1,0 +1,1877 @@
+Welcome to Arriba Eats!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Tim!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Tim!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Fajitas ($9.99) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Meme Dubois!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Meme Dubois!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Soupe a l'Oignon Gratinee ($16.50) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Lin Zhao!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Lin Zhao!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Spicy Prawn Balls ($4.99) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Stan Grillman!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Stan Grillman!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Brisket ($24.95) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Haruki Tanaka!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Haruki Tanaka!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Yuzu Miso Glaced Black Cod ($26.00) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Lawrence Buckingham!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Lawrence Buckingham!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Laz's Lasagne ($19.99) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your restaurant's name:
+Please select your restaurant's style:
+1: Italian
+2: French
+3: Chinese
+4: Japanese
+5: American
+6: Australian
+Please enter a choice between 1 and 6:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a client, Alan!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Alan!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+This is your restaurant's current menu:
+Please enter the name of the new item (blank to cancel):
+Please enter the price of the new item (without the $):
+Successfully added Ribs ($29.99) to menu.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your location (in the form of X,Y):
+You have been successfully registered as a customer, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Alan's Aussie BBQ     5,5    2     Australian  -  
+2: Chez Meme             1,3    4     French      -  
+3: Green Lotus           0,7    5     Chinese     -  
+4: Kumo no Hana          7,3    6     Japanese    -  
+5: Laz's Lasagne         2,1    5     Italian     -  
+6: Stan's Bar & Grill    1,9    6     Australian  -  
+7: Tim's Tex-Mex         1,10   7     American    -  
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+Placing order from Alan's Aussie BBQ.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Current order total: $0.00
+1:  $29.99  Ribs
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Adding Ribs to order.
+Please enter quantity (0 to cancel):
+Added 1 x Ribs to order.
+Current order total: $29.99
+1:  $29.99  Ribs
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Your order has been placed. Your order number is #1.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Alan's Aussie BBQ     5,5    2     Australian  -  
+2: Chez Meme             1,3    4     French      -  
+3: Green Lotus           0,7    5     Chinese     -  
+4: Kumo no Hana          7,3    6     Japanese    -  
+5: Laz's Lasagne         2,1    5     Italian     -  
+6: Stan's Bar & Grill    1,9    6     Australian  -  
+7: Tim's Tex-Mex         1,10   7     American    -  
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+Placing order from Chez Meme.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Current order total: $0.00
+1:  $16.50  Soupe a l'Oignon Gratinee
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Adding Soupe a l'Oignon Gratinee to order.
+Please enter quantity (0 to cancel):
+Added 2 x Soupe a l'Oignon Gratinee to order.
+Current order total: $33.00
+1:  $16.50  Soupe a l'Oignon Gratinee
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Your order has been placed. Your order number is #2.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Alan's Aussie BBQ     5,5    2     Australian  -  
+2: Chez Meme             1,3    4     French      -  
+3: Green Lotus           0,7    5     Chinese     -  
+4: Kumo no Hana          7,3    6     Japanese    -  
+5: Laz's Lasagne         2,1    5     Italian     -  
+6: Stan's Bar & Grill    1,9    6     Australian  -  
+7: Tim's Tex-Mex         1,10   7     American    -  
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+Placing order from Green Lotus.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Current order total: $0.00
+1:   $4.99  Spicy Prawn Balls
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Adding Spicy Prawn Balls to order.
+Please enter quantity (0 to cancel):
+Added 1 x Spicy Prawn Balls to order.
+Current order total: $4.99
+1:   $4.99  Spicy Prawn Balls
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Your order has been placed. Your order number is #3.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Alan's Aussie BBQ     5,5    2     Australian  -  
+2: Chez Meme             1,3    4     French      -  
+3: Green Lotus           0,7    5     Chinese     -  
+4: Kumo no Hana          7,3    6     Japanese    -  
+5: Laz's Lasagne         2,1    5     Italian     -  
+6: Stan's Bar & Grill    1,9    6     Australian  -  
+7: Tim's Tex-Mex         1,10   7     American    -  
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+Placing order from Kumo no Hana.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Current order total: $0.00
+1:  $26.00  Yuzu Miso Glaced Black Cod
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Adding Yuzu Miso Glaced Black Cod to order.
+Please enter quantity (0 to cancel):
+Added 3 x Yuzu Miso Glaced Black Cod to order.
+Current order total: $78.00
+1:  $26.00  Yuzu Miso Glaced Black Cod
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Your order has been placed. Your order number is #4.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Alan's Aussie BBQ     5,5    2     Australian  -  
+2: Chez Meme             1,3    4     French      -  
+3: Green Lotus           0,7    5     Chinese     -  
+4: Kumo no Hana          7,3    6     Japanese    -  
+5: Laz's Lasagne         2,1    5     Italian     -  
+6: Stan's Bar & Grill    1,9    6     Australian  -  
+7: Tim's Tex-Mex         1,10   7     American    -  
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+Placing order from Stan's Bar & Grill.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Current order total: $0.00
+1:  $24.95  Brisket
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Adding Brisket to order.
+Please enter quantity (0 to cancel):
+Added 2 x Brisket to order.
+Current order total: $49.90
+1:  $24.95  Brisket
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Your order has been placed. Your order number is #5.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Alan's Aussie BBQ     5,5    2     Australian  -  
+2: Chez Meme             1,3    4     French      -  
+3: Green Lotus           0,7    5     Chinese     -  
+4: Kumo no Hana          7,3    6     Japanese    -  
+5: Laz's Lasagne         2,1    5     Italian     -  
+6: Stan's Bar & Grill    1,9    6     Australian  -  
+7: Tim's Tex-Mex         1,10   7     American    -  
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+Placing order from Tim's Tex-Mex.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Current order total: $0.00
+1:   $9.99  Fajitas
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Adding Fajitas to order.
+Please enter quantity (0 to cancel):
+Added 4 x Fajitas to order.
+Current order total: $39.96
+1:   $9.99  Fajitas
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Your order has been placed. Your order number is #6.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Which type of user would you like to register as?
+1: Customer
+2: Deliverer
+3: Client
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Please enter your name:
+Please enter your age (18-100):
+Please enter your email address:
+Please enter your mobile phone number:
+Your password must:
+- be at least 8 characters long
+- contain a number
+- contain a lowercase letter
+- contain an uppercase letter
+Please enter a password:
+Please confirm your password:
+Please enter your licence plate:
+You have been successfully registered as a deliverer, James O'Malley!
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Please enter your location (in the form of X,Y):
+The following orders are available for delivery. Select an order to accept it:
+   Order  Restaurant Name       Loc    Customer Name    Loc    Dist
+1: 1      Alan's Aussie BBQ     5,5    Sam Bowes-Lyon   3,5    2
+2: 2      Chez Meme             1,3    Sam Bowes-Lyon   3,5    10
+3: 3      Green Lotus           0,7    Sam Bowes-Lyon   3,5    12
+4: 4      Kumo no Hana          7,3    Sam Bowes-Lyon   3,5    10
+5: 5      Stan's Bar & Grill    1,9    Sam Bowes-Lyon   3,5    14
+6: 6      Tim's Tex-Mex         1,10   Sam Bowes-Lyon   3,5    16
+7: Return to the previous menu
+Please enter a choice between 1 and 7:
+Thanks for accepting the order. Please head to Alan's Aussie BBQ at 5,5 to pick it up.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thanks. We have informed Alan's Aussie BBQ that you have arrived and are ready to pick up order #1.
+Please show the staff this screen as confirmation.
+The order is still being prepared, so please wait patiently until it is ready.
+When you have the order, please deliver it to Sam Bowes-Lyon at 3,5.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Alan!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you are ready to start cooking:
+1: Order #1 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #1 is now marked as cooking. Please prepare the order, then mark it as finished cooking:
+1 x Ribs
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you have finished preparing it:
+1: Order #1 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #1 is now ready for collection.
+Please take it to the deliverer with licence plate JAMES 94, who is waiting to collect it.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+These deliverers have arrived and are waiting to collect orders.
+Select an order to indicate that the deliverer has collected it:
+1: Order #1 for Sam Bowes-Lyon (Deliverer license plate: JAMES 94) (Order status: Cooked)
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #1 is now marked as being delivered.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thank you for making the delivery.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Please enter your location (in the form of X,Y):
+The following orders are available for delivery. Select an order to accept it:
+   Order  Restaurant Name       Loc    Customer Name    Loc    Dist
+1: 2      Chez Meme             1,3    Sam Bowes-Lyon   3,5    8
+2: 3      Green Lotus           0,7    Sam Bowes-Lyon   3,5    10
+3: 4      Kumo no Hana          7,3    Sam Bowes-Lyon   3,5    12
+4: 5      Stan's Bar & Grill    1,9    Sam Bowes-Lyon   3,5    12
+5: 6      Tim's Tex-Mex         1,10   Sam Bowes-Lyon   3,5    14
+6: Return to the previous menu
+Please enter a choice between 1 and 6:
+Thanks for accepting the order. Please head to Chez Meme at 1,3 to pick it up.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thanks. We have informed Chez Meme that you have arrived and are ready to pick up order #2.
+Please show the staff this screen as confirmation.
+The order is still being prepared, so please wait patiently until it is ready.
+When you have the order, please deliver it to Sam Bowes-Lyon at 3,5.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Meme Dubois!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you are ready to start cooking:
+1: Order #2 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #2 is now marked as cooking. Please prepare the order, then mark it as finished cooking:
+2 x Soupe a l'Oignon Gratinee
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you have finished preparing it:
+1: Order #2 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #2 is now ready for collection.
+Please take it to the deliverer with licence plate JAMES 94, who is waiting to collect it.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+These deliverers have arrived and are waiting to collect orders.
+Select an order to indicate that the deliverer has collected it:
+1: Order #2 for Sam Bowes-Lyon (Deliverer license plate: JAMES 94) (Order status: Cooked)
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #2 is now marked as being delivered.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thank you for making the delivery.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Please enter your location (in the form of X,Y):
+The following orders are available for delivery. Select an order to accept it:
+   Order  Restaurant Name       Loc    Customer Name    Loc    Dist
+1: 3      Green Lotus           0,7    Sam Bowes-Lyon   3,5    10
+2: 4      Kumo no Hana          7,3    Sam Bowes-Lyon   3,5    12
+3: 5      Stan's Bar & Grill    1,9    Sam Bowes-Lyon   3,5    12
+4: 6      Tim's Tex-Mex         1,10   Sam Bowes-Lyon   3,5    14
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+Thanks for accepting the order. Please head to Green Lotus at 0,7 to pick it up.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thanks. We have informed Green Lotus that you have arrived and are ready to pick up order #3.
+Please show the staff this screen as confirmation.
+The order is still being prepared, so please wait patiently until it is ready.
+When you have the order, please deliver it to Sam Bowes-Lyon at 3,5.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Lin Zhao!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you are ready to start cooking:
+1: Order #3 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #3 is now marked as cooking. Please prepare the order, then mark it as finished cooking:
+1 x Spicy Prawn Balls
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you have finished preparing it:
+1: Order #3 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #3 is now ready for collection.
+Please take it to the deliverer with licence plate JAMES 94, who is waiting to collect it.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+These deliverers have arrived and are waiting to collect orders.
+Select an order to indicate that the deliverer has collected it:
+1: Order #3 for Sam Bowes-Lyon (Deliverer license plate: JAMES 94) (Order status: Cooked)
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #3 is now marked as being delivered.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thank you for making the delivery.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Please enter your location (in the form of X,Y):
+The following orders are available for delivery. Select an order to accept it:
+   Order  Restaurant Name       Loc    Customer Name    Loc    Dist
+1: 4      Kumo no Hana          7,3    Sam Bowes-Lyon   3,5    12
+2: 5      Stan's Bar & Grill    1,9    Sam Bowes-Lyon   3,5    12
+3: 6      Tim's Tex-Mex         1,10   Sam Bowes-Lyon   3,5    14
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+Thanks for accepting the order. Please head to Kumo no Hana at 7,3 to pick it up.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thanks. We have informed Kumo no Hana that you have arrived and are ready to pick up order #4.
+Please show the staff this screen as confirmation.
+The order is still being prepared, so please wait patiently until it is ready.
+When you have the order, please deliver it to Sam Bowes-Lyon at 3,5.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Haruki Tanaka!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you are ready to start cooking:
+1: Order #4 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #4 is now marked as cooking. Please prepare the order, then mark it as finished cooking:
+3 x Yuzu Miso Glaced Black Cod
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you have finished preparing it:
+1: Order #4 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #4 is now ready for collection.
+Please take it to the deliverer with licence plate JAMES 94, who is waiting to collect it.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+These deliverers have arrived and are waiting to collect orders.
+Select an order to indicate that the deliverer has collected it:
+1: Order #4 for Sam Bowes-Lyon (Deliverer license plate: JAMES 94) (Order status: Cooked)
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #4 is now marked as being delivered.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thank you for making the delivery.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Please enter your location (in the form of X,Y):
+The following orders are available for delivery. Select an order to accept it:
+   Order  Restaurant Name       Loc    Customer Name    Loc    Dist
+1: 5      Stan's Bar & Grill    1,9    Sam Bowes-Lyon   3,5    12
+2: 6      Tim's Tex-Mex         1,10   Sam Bowes-Lyon   3,5    14
+3: Return to the previous menu
+Please enter a choice between 1 and 3:
+Thanks for accepting the order. Please head to Stan's Bar & Grill at 1,9 to pick it up.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thanks. We have informed Stan's Bar & Grill that you have arrived and are ready to pick up order #5.
+Please show the staff this screen as confirmation.
+The order is still being prepared, so please wait patiently until it is ready.
+When you have the order, please deliver it to Sam Bowes-Lyon at 3,5.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Stan Grillman!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you are ready to start cooking:
+1: Order #5 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #5 is now marked as cooking. Please prepare the order, then mark it as finished cooking:
+2 x Brisket
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you have finished preparing it:
+1: Order #5 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #5 is now ready for collection.
+Please take it to the deliverer with licence plate JAMES 94, who is waiting to collect it.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+These deliverers have arrived and are waiting to collect orders.
+Select an order to indicate that the deliverer has collected it:
+1: Order #5 for Sam Bowes-Lyon (Deliverer license plate: JAMES 94) (Order status: Cooked)
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #5 is now marked as being delivered.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thank you for making the delivery.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Alan's Aussie BBQ     5,5    2     Australian  -  
+2: Chez Meme             1,3    4     French      -  
+3: Green Lotus           0,7    5     Chinese     -  
+4: Kumo no Hana          7,3    6     Japanese    -  
+5: Laz's Lasagne         2,1    5     Italian     -  
+6: Stan's Bar & Grill    1,9    6     Australian  -  
+7: Tim's Tex-Mex         1,10   7     American    -  
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+Placing order from Stan's Bar & Grill.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Current order total: $0.00
+1:  $24.95  Brisket
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Adding Brisket to order.
+Please enter quantity (0 to cancel):
+Added 1 x Brisket to order.
+Current order total: $24.95
+1:  $24.95  Brisket
+2: Complete order
+3: Cancel order
+Please enter a choice between 1 and 3:
+Your order has been placed. Your order number is #7.
+1: See this restaurant's menu and place an order
+2: See reviews for this restaurant
+3: Return to main menu
+Please enter a choice between 1 and 3:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Please enter your location (in the form of X,Y):
+The following orders are available for delivery. Select an order to accept it:
+   Order  Restaurant Name       Loc    Customer Name    Loc    Dist
+1: 6      Tim's Tex-Mex         1,10   Sam Bowes-Lyon   3,5    14
+2: 7      Stan's Bar & Grill    1,9    Sam Bowes-Lyon   3,5    12
+3: Return to the previous menu
+Please enter a choice between 1 and 3:
+Thanks for accepting the order. Please head to Tim's Tex-Mex at 1,10 to pick it up.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thanks. We have informed Tim's Tex-Mex that you have arrived and are ready to pick up order #6.
+Please show the staff this screen as confirmation.
+The order is still being prepared, so please wait patiently until it is ready.
+When you have the order, please deliver it to Sam Bowes-Lyon at 3,5.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Tim!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you are ready to start cooking:
+1: Order #6 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #6 is now marked as cooking. Please prepare the order, then mark it as finished cooking:
+4 x Fajitas
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you have finished preparing it:
+1: Order #6 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #6 is now ready for collection.
+Please take it to the deliverer with licence plate JAMES 94, who is waiting to collect it.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+These deliverers have arrived and are waiting to collect orders.
+Select an order to indicate that the deliverer has collected it:
+1: Order #6 for Sam Bowes-Lyon (Deliverer license plate: JAMES 94) (Order status: Cooked)
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #6 is now marked as being delivered.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thank you for making the delivery.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Please enter your location (in the form of X,Y):
+The following orders are available for delivery. Select an order to accept it:
+   Order  Restaurant Name       Loc    Customer Name    Loc    Dist
+1: 7      Stan's Bar & Grill    1,9    Sam Bowes-Lyon   3,5    12
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Thanks for accepting the order. Please head to Stan's Bar & Grill at 1,9 to pick it up.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thanks. We have informed Stan's Bar & Grill that you have arrived and are ready to pick up order #7.
+Please show the staff this screen as confirmation.
+The order is still being prepared, so please wait patiently until it is ready.
+When you have the order, please deliver it to Sam Bowes-Lyon at 3,5.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Stan Grillman!
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you are ready to start cooking:
+1: Order #7 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #7 is now marked as cooking. Please prepare the order, then mark it as finished cooking:
+1 x Brisket
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+Select an order once you have finished preparing it:
+1: Order #7 for Sam Bowes-Lyon
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #7 is now ready for collection.
+Please take it to the deliverer with licence plate JAMES 94, who is waiting to collect it.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+These deliverers have arrived and are waiting to collect orders.
+Select an order to indicate that the deliverer has collected it:
+1: Order #7 for Sam Bowes-Lyon (Deliverer license plate: JAMES 94) (Order status: Cooked)
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+Order #7 is now marked as being delivered.
+Please make a choice from the menu below:
+1: Display your user information
+2: Add item to restaurant menu
+3: See current orders
+4: Start cooking order
+5: Finish cooking order
+6: Handle deliverers who have arrived
+7: Log out
+Please enter a choice between 1 and 7:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, James O'Malley!
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+Thank you for making the delivery.
+Please make a choice from the menu below:
+1: Display your user information
+2: List orders available to deliver
+3: Arrived at restaurant to pick up order
+4: Mark this delivery as complete
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Email:
+Password:
+Welcome back, Sam Bowes-Lyon!
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Select a previous order to rate the restaurant it came from:
+1: Order #1 from Alan's Aussie BBQ
+2: Order #2 from Chez Meme
+3: Order #3 from Green Lotus
+4: Order #4 from Kumo no Hana
+5: Order #5 from Stan's Bar & Grill
+6: Order #6 from Tim's Tex-Mex
+7: Order #7 from Stan's Bar & Grill
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+You are rating order #1 from Alan's Aussie BBQ:
+1 x Ribs
+Please enter a rating for this restaurant (1-5, 0 to cancel):
+Please enter a comment to accompany this rating:
+Thank you for rating Alan's Aussie BBQ.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Select a previous order to rate the restaurant it came from:
+1: Order #2 from Chez Meme
+2: Order #3 from Green Lotus
+3: Order #4 from Kumo no Hana
+4: Order #5 from Stan's Bar & Grill
+5: Order #6 from Tim's Tex-Mex
+6: Order #7 from Stan's Bar & Grill
+7: Return to the previous menu
+Please enter a choice between 1 and 7:
+You are rating order #5 from Stan's Bar & Grill:
+2 x Brisket
+Please enter a rating for this restaurant (1-5, 0 to cancel):
+Please enter a comment to accompany this rating:
+Thank you for rating Stan's Bar & Grill.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Select a previous order to rate the restaurant it came from:
+1: Order #2 from Chez Meme
+2: Order #3 from Green Lotus
+3: Order #4 from Kumo no Hana
+4: Order #6 from Tim's Tex-Mex
+5: Order #7 from Stan's Bar & Grill
+6: Return to the previous menu
+Please enter a choice between 1 and 6:
+You are rating order #4 from Kumo no Hana:
+3 x Yuzu Miso Glaced Black Cod
+Please enter a rating for this restaurant (1-5, 0 to cancel):
+Please enter a comment to accompany this rating:
+Thank you for rating Kumo no Hana.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Select a previous order to rate the restaurant it came from:
+1: Order #2 from Chez Meme
+2: Order #3 from Green Lotus
+3: Order #6 from Tim's Tex-Mex
+4: Order #7 from Stan's Bar & Grill
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You are rating order #2 from Chez Meme:
+2 x Soupe a l'Oignon Gratinee
+Please enter a rating for this restaurant (1-5, 0 to cancel):
+Please enter a comment to accompany this rating:
+Thank you for rating Chez Meme.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Select a previous order to rate the restaurant it came from:
+1: Order #3 from Green Lotus
+2: Order #6 from Tim's Tex-Mex
+3: Order #7 from Stan's Bar & Grill
+4: Return to the previous menu
+Please enter a choice between 1 and 4:
+You are rating order #3 from Green Lotus:
+1 x Spicy Prawn Balls
+Please enter a rating for this restaurant (1-5, 0 to cancel):
+Please enter a comment to accompany this rating:
+Thank you for rating Green Lotus.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Select a previous order to rate the restaurant it came from:
+1: Order #6 from Tim's Tex-Mex
+2: Order #7 from Stan's Bar & Grill
+3: Return to the previous menu
+Please enter a choice between 1 and 3:
+You are rating order #6 from Tim's Tex-Mex:
+4 x Fajitas
+Please enter a rating for this restaurant (1-5, 0 to cancel):
+Please enter a comment to accompany this rating:
+Thank you for rating Tim's Tex-Mex.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+Select a previous order to rate the restaurant it came from:
+1: Order #7 from Stan's Bar & Grill
+2: Return to the previous menu
+Please enter a choice between 1 and 2:
+You are rating order #7 from Stan's Bar & Grill:
+1 x Brisket
+Please enter a rating for this restaurant (1-5, 0 to cancel):
+Please enter a comment to accompany this rating:
+Thank you for rating Stan's Bar & Grill.
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+How would you like the list of restaurants ordered?
+1: Sorted alphabetically by name
+2: Sorted by distance
+3: Sorted by style
+4: Sorted by average rating
+5: Return to the previous menu
+Please enter a choice between 1 and 5:
+You can order from the following restaurants:
+   Restaurant Name       Loc    Dist  Style       Rating
+1: Alan's Aussie BBQ     5,5    2     Australian  5.0
+2: Stan's Bar & Grill    1,9    6     Australian  4.5
+3: Green Lotus           0,7    5     Chinese     4.0
+4: Tim's Tex-Mex         1,10   7     American    4.0
+5: Chez Meme             1,3    4     French      3.0
+6: Kumo no Hana          7,3    6     Japanese    2.0
+7: Laz's Lasagne         2,1    5     Italian     -  
+8: Return to the previous menu
+Please enter a choice between 1 and 8:
+Please make a choice from the menu below:
+1: Display your user information
+2: Select a list of restaurants to order from
+3: See the status of your orders
+4: Rate a restaurant you've ordered from
+5: Log out
+Please enter a choice between 1 and 5:
+You are now logged out.
+Please make a choice from the menu below:
+1: Login as a registered user
+2: Register as a new user
+3: Exit
+Please enter a choice between 1 and 3:
+Thank you for using Arriba Eats!
