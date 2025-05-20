@@ -16,6 +16,8 @@ namespace AribaEats.Models
         public string Mobile { get; set; }
         public string Password { get; set; }
         public Location Location { get; set; }
+        
+        public string LicensePlate { get; set; }
 
         public Deliverer()
         {
@@ -29,6 +31,11 @@ namespace AribaEats.Models
             Email = email;
             Mobile = phone;
             Password = password;
+        }
+
+        public string GetCurrentDeliveryStatus()
+        {
+            return "IMPLEMENT!";
         }
     }
 }

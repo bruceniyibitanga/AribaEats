@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AribaEats.Models.Console
+namespace AribaEats.Models.ConsoleFiles
 {
     public class ActionMenuItem : IMenuItem
     {

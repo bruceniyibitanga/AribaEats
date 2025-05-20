@@ -16,6 +16,9 @@ namespace AribaEats.Models
         public string Mobile { get; set; }
         public string Password { get; set; }
         public Location Location { get; set; }
+        public string RestaurantName { get; set; }
+        public string RestaurantStyle { get; set; }
+        public Location RestaurantLocation { get; set; }
         
         public Client()
         {
@@ -28,6 +31,11 @@ namespace AribaEats.Models
             Email = email;
             Mobile = phone;
             Password = password;
+        }
+
+        public string GetRestaurantLocation()
+        {
+            return "IMPLEMENT_LOCATION";
         }
     }
 }

@@ -45,11 +45,11 @@ namespace AribaEats.Models
             return profile.Password == password;
         }
 
-        public (bool ProfileExists, bool PasswordCorrect, Customer? User) LoginAsCustomer(string email, string password)
+        public (bool ProfileExists, bool PasswordCorrect, IUser? User) Login(string email, string password)
         {
             var profile = GetUserByEmail(email);
 
-            if (profile is not Customer customer)
+            if (profile is not IUser customer)
                 return (false, false, null);
 
             var isCorrectPassword = VerifyUserWithPassword(customer, password);
@@ -61,16 +61,19 @@ namespace AribaEats.Models
             return (true, true, customer);
         }
 
-        public Deliverer LoginAsDeliverer(string email, string password)
+        public bool AddDeliverer(Deliverer deliverer)
         {
-            bool isUser = DoesUserExist(email);
-
-            if (!isUser) return new Deliverer();
-            
-            // Try login user with password
-            return _deliverers.SingleOrDefault(e => e.Email == email && e.Password == password);
+            if (!IsEmailUnique(deliverer.Email)) return false;
+            _deliverers.Add(deliverer);
+            return true;
         }
 
+        public bool AddClient(Client client)
+        {
+            if (!IsEmailUnique(client.Email)) return false;
+            _clients.Add(client);
+            return true;
+        }
         public Client LoginAsClient(string email, string password)
         {
             bool isUser = DoesUserExist(email);

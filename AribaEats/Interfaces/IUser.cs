@@ -17,6 +17,5 @@ namespace AribaEats.Interfaces
         string Mobile { get; set; }
         string Password { get; set; }
         Location Location { get; set; }
-
     }
 }
