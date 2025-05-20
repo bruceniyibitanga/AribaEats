@@ -1,6 +1,3 @@
-using AribaEats;
-using AribaEats.Models;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System.Diagnostics;
 
 namespace AribaEats.Tests
@@ -92,6 +89,41 @@ namespace AribaEats.Tests
             await RunTestForFileAsync("14. Display User Information - Multiple Customers");
         }
 
+        [Fact]
+        public async Task Test_15_RegisterDeliverer()
+        {
+            await RunTestForFileAsync("15. Register Deliverer and Login");
+        }
+
+        [Fact]
+        public async Task Test_16_RegisterDeliverer_InvalidPlate()
+        {
+            await RunTestForFileAsync("16. Register Deliverer - Invalid Plate");
+        }
+
+        [Fact]
+        public async Task Test_17_DisplayUserInformation_DelivererInfo()
+        {
+            await RunTestForFileAsync("17. Display User Information - Deliverer");
+        }
+
+        [Fact]
+        public async Task Test_18_RegisterClientAndLogin()
+        {
+            await RunTestForFileAsync("18. Register Client and Login");
+        }
+
+        [Fact]
+        public async Task Test_19_RegisterClient_InvalidRestaurantName()
+        {
+            await RunTestForFileAsync("19. Register Client - Invalid Restaurant Name");
+        }
+
+        [Fact]
+        public async Task Test_20_DisplayUserInformation_Client()
+        {
+            await RunTestForFileAsync("20. Display User Information - Client");
+        }
 
         private async Task RunTestForFileAsync(string fileName)
         {
