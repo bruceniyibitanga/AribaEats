@@ -244,18 +244,20 @@ public class MenuFactory : IMenuFactory
             {
                 _userDisplayService.DisplayClientInformation(client);
             }),
-            new ActionMenuItem("List orders available to deliver", () =>
+            new ActionMenuItem("Add item to restaurant menu", () =>
             {
                 // TODO: Implement order listing for client
             }),
-            new ActionMenuItem("Arrived at restaurant to pick up order", () =>
+            new ActionMenuItem("See current orders", () =>
             {
                 // TODO: Implement restaurant-related functionality
             }),
-            new ActionMenuItem("Mark this delivery as complete", () =>
+            new ActionMenuItem("Start cooking order", () =>
             {
                 // TODO: Implement order completion for client
             }),
+            new ActionMenuItem("Finish cooking order", () => {}),
+            new ActionMenuItem("Handle deliverers who have arrived", () => {}),
             new ActionMenuItem("Log out", () =>
             {
                 _userManager.Logout();

@@ -10,11 +10,15 @@ public class Restaurant
     public string Name { get; set; }
     public string Style { get; set; }
     public int Rating { get; private set; }
-    
-    public Restaurant(string name, string style, int rating)
+
+    public Restaurant()
     {
+    }
+    public Restaurant(string name, string style, int rating, string id)
+    {
+        Id = Guid.NewGuid().ToString();
         Name = name;
-        Rating = rating;
         Style = style;
+        Rating = rating;
     }
 }
