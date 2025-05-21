@@ -125,6 +125,72 @@ namespace AribaEats.Tests
             await RunTestForFileAsync("20. Display User Information - Client");
         }
 
+        [Fact]
+        public async Task Test_21_AddItemToMenu()
+        {
+            await RunTestForFileAsync("21. Add Item to Menu");
+        }
+
+        [Fact]
+        public async Task Test_22_AddItemToMenu_InvalidPrice()
+        {
+            await RunTestForFileAsync("22. Add Item to Menu - Invalid Price");
+        }
+
+        [Fact]
+        public async Task Test_23_PlaceOrder()
+        {
+            await RunTestForFileAsync("23. Place Order");
+        }
+
+        [Fact]
+        public async Task Test_24_DisplayUserInformation_AfterPlacingOrder()
+        {
+            await RunTestForFileAsync("24. Display User Information - after placing order");
+        }
+
+        [Fact]
+        public async Task Test_25_PlaceOrder_MultipleCustomers()
+        {
+            await RunTestForFileAsync("25. Place order - Multiple Customers");
+        }
+
+        [Fact]
+        public async Task Test_26_PlaceOrder_MultipleInstancesOfItemInOrder()
+        {
+            await RunTestForFileAsync("26. Place order - multiple instances of same item in order");
+        }
+
+        [Fact]
+        public async Task Test_27_MultipleMenuItems()
+        {
+            await RunTestForFileAsync("27. Multiple menu items");
+        }
+
+        [Fact]
+        public async Task Test_28_AcceptDeliveryJob()
+        {
+            await RunTestForFileAsync("28. Accept delivery job");
+        }
+
+        [Fact]
+        public async Task Test_29_DisplayUserInformation_AfterAcceptingJob()
+        {
+            await RunTestForFileAsync("29. Display User Information - after accepting job");
+        }
+
+        [Fact]
+        public async Task Test_30_SeeOrdersAndCookOrder()
+        {
+            await RunTestForFileAsync("30. See orders and cook order");
+        }
+
+        [Fact]
+        public async Task Test_31_SeeOrdersAndCookOrder_DriverAssignedLater()
+        {
+            await RunTestForFileAsync("31. See orders and cook order - driver assigned later");
+        }
+
         private async Task RunTestForFileAsync(string fileName)
         {
             // Arrange
