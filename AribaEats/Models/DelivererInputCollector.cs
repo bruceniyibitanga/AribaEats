@@ -8,22 +8,20 @@ public class DelivererInputCollector : BaseUserInputCollector
         _validationService = validationService;
     }
 
-    protected override bool ShouldPromptForLocation() => false;
+    protected override void ConfigureInputFields()
+    {
+        _inputFields.Add(new NameInputField(() => GetUserInput("name")));
+        _inputFields.Add(new AgeInputField(() => GetUserInput("age (18-100)")));
+        _inputFields.Add(new EmailInputField(() => GetUserInput("email address")));
+        _inputFields.Add(new MobileInputField(() => GetUserInput("mobile phone number")));
+        _inputFields.Add(new PasswordInputField(() => GetUserInput("password")));
+        _inputFields.Add(new LicencePlateInputField(() => GetUserInput("licence plate")));
+    }
 
-    public Deliverer CollectDelivererInputInfo()
+    public Deliverer CollectDelivererInfo()
     {
         var deliverer = new Deliverer();
-        CollectBaseUserInfo(deliverer);
-
-        bool isValid = false;
-        while (!isValid)
-        {
-            string licensePlate = GetUserInput("licence plate");
-            isValid = _validationService.IsValidLicencePlate(licensePlate);
-            if (isValid) deliverer.LicensePlate = licensePlate;
-            else System.Console.WriteLine("Invalid license plate");
-
-        }
+        CollectUserInputInfo(deliverer);
         return deliverer;
     }
 }

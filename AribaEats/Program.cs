@@ -6,66 +6,24 @@ using AribaEats.Models.ConsoleFiles;
 var userManager = new UserManager();
 var restaurantManager = new RestaurantManager();
 var orderManager = new OrderManager(restaurantManager);
+var userDisplayService = new UserDisplayService();
+
+// Create the menu factory (no longer passing registration menu as a parameter)
+var menuFactory = new MenuFactory(userManager, restaurantManager, orderManager, userDisplayService);
+
+// Create the navigator with null initial menu
 var navigator = new MenuNavigator(null);
 
-// Declare menu variables first
-IMenu loginMenu;
-IMenu registrationMenu;
+// Get the login and registration menus from factory
+var loginMenu = menuFactory.GetLoginMenu(navigator);
+var registrationMenu = menuFactory.GetRegistrationMenu(navigator, loginMenu);
 
-registrationMenu = CreateRegistrationMenuPlaceholder(navigator);
+// Now we can link the login menu to registration menu
+menuFactory.LinkLoginToRegistration(loginMenu, registrationMenu, navigator);
 
-loginMenu = CreateLoginMenu(navigator, userManager, registrationMenu);
-
-// Update the registration menu with proper actions
-UpdateRegistrationMenu(registrationMenu, navigator, userManager, loginMenu);
-
-// Update current menu screen
+// Set the initial menu to login
 navigator.SetCurrentMenu(loginMenu);
 
 Console.WriteLine("Welcome to Arriba Eats!");
-
-// Method to create a placeholder registration menu
-IMenu CreateRegistrationMenuPlaceholder(MenuNavigator navigator)
-{
-    return new ConsoleMenu(
-        "Which type of user would you like to register as?",
-    new IMenuItem[]
-    {
-        new ActionMenuItem("Customer", () => { /* Placeholder */ }),
-        new ActionMenuItem("Deliverer", () => { /* Placeholder */ }),
-        new ActionMenuItem("Client", () => { /* Placeholder */ }),
-        new BackMenuItem("Return to the previous menu", navigator)
-    });
-}
-
-// Method to update the registration menu with proper actions
-void UpdateRegistrationMenu(IMenu registrationMenu, MenuNavigator navigator, UserManager userManager, IMenu loginMenu)
-{
-    var consoleMenu = (ConsoleMenu)registrationMenu;
-
-    // Update Customer menu item
-    consoleMenu.EditMenuItem(0, new ActionMenuItem("Customer", () =>
-    {
-        var registrar = new CustomerRegistrar(userManager);
-        var customer = registrar.CollectUserInfo();
-        registrar.Register(customer, navigator, loginMenu);
-    }));
-
-    // Update Deliverer menu item
-    consoleMenu.EditMenuItem(1, new ActionMenuItem("Deliverer", () =>
-    {
-        var registrar = new DelivererRegistrar(userManager);
-        var deliverer = registrar.CollectUserInfo();
-        registrar.Register(deliverer, navigator, loginMenu);
-    }));
-
-    // Update Client menu item
-    consoleMenu.EditMenuItem(2, new ActionMenuItem("Client", () =>
-    {
-        var registrar = new ClientRegistrar(userManager);
-        var client = registrar.CollectUserInfo();
-        registrar.Register(client, navigator, loginMenu);
-    }));
-}
 
 navigator.Start();

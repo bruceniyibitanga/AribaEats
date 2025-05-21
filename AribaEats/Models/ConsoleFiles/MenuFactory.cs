@@ -7,13 +7,14 @@ public class MenuFactory : IMenuFactory
     private readonly UserManager _userManager;
     private readonly RestaurantManager _restaurantManager;
     private readonly OrderManager _orderManager;
-    private readonly IMenu _loginMenu;
-    public MenuFactory(UserManager userManager, RestaurantManager restaurantManager, OrderManager orderManager, IMenu loginMenu)
+    private readonly UserDisplayService _userDisplayService;
+    
+    public MenuFactory(UserManager userManager, RestaurantManager restaurantManager, OrderManager orderManager, UserDisplayService userDisplayService)
     {
         _userManager = userManager;
         _restaurantManager = restaurantManager;
         _orderManager = orderManager;
-        _loginMenu = loginMenu;
+        _userDisplayService = userDisplayService;
     }
     
     public IMenu CreateMenuFor(IUser user, MenuNavigator navigator)
@@ -22,101 +23,98 @@ public class MenuFactory : IMenuFactory
         {
             Customer customer => CreateMenuForCustomer(navigator, customer),
             Deliverer deliverer => CreateMenuForDeliverer(navigator, deliverer),
-            Client client => CreateMenuForClient(navigator, client)
+            Client client => CreateMenuForClient(navigator, client),
+            _ => throw new ArgumentException("Unknown user type")
         };
     }
     
-    // LOGIN MENU
-    IMenu CreateLoginMenu(MenuNavigator navigator, UserManager userManager, IMenu registrationMenu)
+    // Create login menu without requiring registration menu upfront
+    public IMenu GetLoginMenu(MenuNavigator navigator)
+    {
+        // Create login menu with a placeholder for the registration menu option
+        var loginMenu = new ConsoleMenu(
+            "Please make a choice from the menu below:",
+            new IMenuItem[]
+            {
+                new ActionMenuItem("Login as a registered user", () =>
+                {
+                    Console.WriteLine("Email:");
+                    string? email = Console.ReadLine();
+
+                    Console.WriteLine("Password:");
+                    string? password = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+                    {
+                        Console.WriteLine("Email and password must not be empty.");
+                        return;
+                    }
+
+                    var user = _userManager.Login(email, password);
+
+                    if (user.ProfileExists && user.PasswordCorrect)
+                    {
+                        Console.WriteLine($"Welcome back, {user.User!.Name}!");
+                        navigator.NavigateTo(CreateMenuFor(user.User, navigator));
+                    }
+                    else
+                        Console.WriteLine("Invalid email or password.");
+                }),
+                // Placeholder for registration menu link - will be updated later
+                new ActionMenuItem("Register as a new user", () => { /* Will be replaced */ }),
+                new ActionMenuItem("Exit", () => {Console.WriteLine("Thank you for using Arriba Eats!"); Environment.Exit(0); })
+            });
+
+        return loginMenu;
+    }
+    
+    // Create the registration menu
+    public IMenu GetRegistrationMenu(MenuNavigator navigator, IMenu loginMenu)
     {
         return new ConsoleMenu(
-        // TODO: THIS LINE IS OFTEN REPEATED AND MAYBE SHOULD BE REFACTORED OUT TO APPEAR WITHOUT REPITION
-        "Please make a choice from the menu below:",
-        new IMenuItem[]
-        {
-            new ActionMenuItem("Login as a registered user", () =>
+            "Which type of user would you like to register as?",
+            new IMenuItem[]
             {
-                Console.WriteLine("Email:");
-                string? email = Console.ReadLine();
-
-                Console.WriteLine("Password:");
-                string? password = Console.ReadLine();
-
-                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+                new ActionMenuItem("Customer", () =>
                 {
-                    Console.WriteLine("Email and password must not be empty.");
-                    return;
-                }
-
-                var user = userManager.Login(email, password);
-
-                if (user.ProfileExists & user.PasswordCorrect)
+                    var registrar = new CustomerRegistrar(_userManager);
+                    var customer = registrar.CollectUserInfo();
+                    registrar.Register(customer, navigator, loginMenu);
+                }),
+                new ActionMenuItem("Deliverer", () =>
                 {
-                    Console.WriteLine($"Welcome back, {user.User!.Name}!");
-                    navigator.NavigateTo(CreateMenuFor(user.User, navigator));
-                }
-                else
-                    Console.WriteLine("Invalid email or password.");
-            }),
-            new NavigateMenuItem("Register as a new user", registrationMenu, navigator),
-            new ActionMenuItem("Exit", () => {Console.WriteLine("Thank you for using Arriba Eats!"); Environment.Exit(0); })
-        });
+                    var registrar = new DelivererRegistrar(_userManager);
+                    var deliverer = registrar.CollectUserInfo();
+                    registrar.Register(deliverer, navigator, loginMenu);
+                }),
+                new ActionMenuItem("Client", () =>
+                {
+                    var registrar = new ClientRegistrar(_userManager);
+                    var client = registrar.CollectUserInfo();
+                    registrar.Register(client, navigator, loginMenu);
+                }),
+                new BackMenuItem("Return to the previous menu", navigator)
+            });
+    }
+    
+    // Link login menu to registration menu after both are created
+    public void LinkLoginToRegistration(IMenu loginMenu, IMenu registrationMenu, MenuNavigator navigator)
+    {
+        if (loginMenu is ConsoleMenu consoleLoginMenu)
+        {
+            // Replace the placeholder registration menu item with actual navigation
+            consoleLoginMenu.EditMenuItem(1, new NavigateMenuItem("Register as a new user", registrationMenu, navigator));
+        }
     }
     
     // CUSTOMER MENUS
-    IMenu CreateCustomerMenu(MenuNavigator navigator, Customer customer)
-    {
-        return new ConsoleMenu("Please make a choice from the menu below:", new IMenuItem[]
-        {
-            new ActionMenuItem("Display your user information", () =>
-            {
-                DisplayUserInformation(customer);
-                // TODO: HIGH COUPLING. WE SHOULDN'T BE DIRECTELY UPDATING THE X, Y LOCATION. HAVE A METHOD THAT SETS THESE.
-                // REFER TO LECTURE SLIDES FOR WK 10 IF NOT SURE!!!!
-                
-                Console.WriteLine($"Location: {customer.Location.X},{customer.Location.Y}");
-                Console.WriteLine(customer.GetOrderSummary());
-            }),
-            new ActionMenuItem("Select a list of restaurants to order from", () =>
-            {
-                // When a user selects this will navigate to the restaurant sort menu first
-                navigator.NavigateTo(CreateRestrauntSortMenu(navigator, customer, _restaurantManager));
-            }),
-            new ActionMenuItem("See the status of your orders", () =>
-            {
-                if (customer.GetOrderCount() == 0) Console.WriteLine("You have not placed any orders.");
-                // TODO: REALLY THINK ABOUT THE ORDER FUNCTIONALITY AND WHETHER THERE SHOULD BE AN ORDER MANAGER?!
-            }),
-            new ActionMenuItem("Rate a restaurant you've ordered from", () =>
-            {
-                // if(customer.GetOrderCount() == 0) Console.WriteLine("You have not placed any orders.");
-                navigator.NavigateTo(CreateRestaurantOrderedFromMenu(navigator, customer, _orderManager));
-            }),
-            new ActionMenuItem("Log out", () =>
-            {
-                _userManager.Logout();
-                Console.WriteLine("You are now logged out.");
-                
-                // If a user has logged out. We want to clear the navigation history. And then redirect them to the login page.
-                // This will help solve issue so that a user can't redirect themselves back as a logged-in user?
-                navigator.NavigateTo(CreateLoginMenu(navigator, _userManager, _loginMenu));
-                navigator.Clear();
-            })
-        });
-    }
-
     private IMenu CreateMenuForCustomer(MenuNavigator navigator, Customer customer)
     {
         return new ConsoleMenu("Please make a choice from the menu below:", new IMenuItem[]
         {
             new ActionMenuItem("Display your user information", () =>
             {
-                DisplayUserInformation(customer);
-                // TODO: HIGH COUPLING. WE SHOULDN'T BE DIRECTELY UPDATING THE X, Y LOCATION. HAVE A METHOD THAT SETS THESE.
-                // REFER TO LECTURE SLIDES FOR WK 10 IF NOT SURE!!!!
-                
-                Console.WriteLine($"Location: {customer.Location.X},{customer.Location.Y}");
-                Console.WriteLine(customer.GetOrderSummary());
+                _userDisplayService.DisplayCustomerInformation(customer);
             }),
             new ActionMenuItem("Select a list of restaurants to order from", () =>
             {
@@ -130,7 +128,6 @@ public class MenuFactory : IMenuFactory
             }),
             new ActionMenuItem("Rate a restaurant you've ordered from", () =>
             {
-                // if(customer.GetOrderCount() == 0) Console.WriteLine("You have not placed any orders.");
                 navigator.NavigateTo(CreateRestaurantOrderedFromMenu(navigator, customer, _orderManager));
             }),
             new ActionMenuItem("Log out", () =>
@@ -139,10 +136,12 @@ public class MenuFactory : IMenuFactory
                 Console.WriteLine("You are now logged out.");
                 
                 // If a user has logged out. We want to clear the navigation history. And then redirect them to the login page.
-                // This will help solve issue so that a user can't redirect themselves back as a logged-in user?
-                navigator.NavigateTo(CreateLoginMenu(navigator, _userManager, _loginMenu));
-                navigator.Clear();
+                var loginMenu = GetLoginMenu(navigator);
+                var registrationMenu = GetRegistrationMenu(navigator, loginMenu);
+                LinkLoginToRegistration(loginMenu, registrationMenu, navigator);
                 
+                navigator.NavigateTo(loginMenu);
+                navigator.Clear();
             })
         });
     }
@@ -155,20 +154,27 @@ public class MenuFactory : IMenuFactory
             new ActionMenuItem("Sorted by distance", () => navigator.NavigateTo(CreateRestrauntListMenu(navigator, customer, restaurantManager, "distance"))),
             new ActionMenuItem("Sorted by style", () => navigator.NavigateTo(CreateRestrauntListMenu(navigator, customer, restaurantManager, "style"))),
             new ActionMenuItem("Sorted by average rating", () => navigator.NavigateTo(CreateRestrauntListMenu(navigator, customer, restaurantManager, "rating"))),
-            new ActionMenuItem("Return to the previous menu", () => navigator.NavigateTo(CreateCustomerMenu(navigator, customer)))
+            new BackMenuItem("Return to the previous menu", navigator)
         });
     }
 
     private IMenu CreateRestrauntListMenu(MenuNavigator navigator, Customer user, RestaurantManager restaurantManager, string sortOrder)
     {
-        // If the user hasn't made an order before, we should display message accordingly.
-        if (user.GetOrderCount() == 0) Console.WriteLine("You have not placed any orders."); navigator.NavigateTo(CreateCustomerMenu(navigator, user));
-        
-        // TODO: Not really what we want. We want to return a new Table.
-        return new ConsoleMenu("You can order from the following restaurants:", new IMenuItem[]
+        // Fixed the condition below - it was incorrectly structured
+        if (user.GetOrderCount() == 0)
         {
+            Console.WriteLine("You have not placed any orders.");
+            return CreateMenuForCustomer(navigator, user);
+        }
+        
+        // TODO: Implement restaurant listing based on sort order
+        var menuItems = new List<IMenuItem>
+        {
+            // Add restaurant items here based on sortOrder
+            new BackMenuItem("Return to the previous menu", navigator)
+        };
 
-        });
+        return new ConsoleMenu("You can order from the following restaurants:", menuItems.ToArray());
     }
 
     private IMenu CreateRestaurantOrderedFromMenu(MenuNavigator navigator, Customer customer, OrderManager orderManager)
@@ -181,10 +187,11 @@ public class MenuFactory : IMenuFactory
         {
             menuItems.Add(new ActionMenuItem(orderStatus, () =>
             {
+                // TODO: Implement rating functionality
             }));
         }
 
-        menuItems.Add(new ActionMenuItem("Return to the previous menu", () => navigator.NavigateBack()));
+        menuItems.Add(new BackMenuItem("Return to the previous menu", navigator));
         
         return new ConsoleMenu(
             "Select a previous order to rate the restaurant it came from:",
@@ -199,84 +206,68 @@ public class MenuFactory : IMenuFactory
         {
             new ActionMenuItem("Display your user information", () =>
             {
-                DisplayUserInformation(deliverer);
-                // TODO: HIGH COUPLING. WE SHOULDN'T BE DIRECTELY UPDATING THE X, Y LOCATION. HAVE A METHOD THAT SETS THESE.
-                // REFER TO LECTURE SLIDES FOR WK 10 IF NOT SURE!!!!
-                
-                Console.WriteLine($"License plate: {deliverer.LicensePlate}");
-                Console.WriteLine(deliverer.GetCurrentDeliveryStatus());
+                _userDisplayService.DisplayDelivererInformation(deliverer);
             }),
             new ActionMenuItem("List orders available to deliver", () =>
             {
+                // TODO: Implement order listing for deliverer
             }),
             new ActionMenuItem("Arrived at restaurant to pick up order", () =>
             {
+                // TODO: Implement order pickup
             }),
             new ActionMenuItem("Mark this delivery as complete", () =>
             {
+                // TODO: Implement order completion
             }),
             new ActionMenuItem("Log out", () =>
             {
                 _userManager.Logout();
                 Console.WriteLine("You are now logged out.");
                 
-                // If a user has logged out. We want to clear the navigation history. And then redirect them to the login page.
-                // This will help solve issue so that a user can't redirect themselves back as a logged-in user?
-                navigator.NavigateTo(CreateLoginMenu(navigator, _userManager, _loginMenu));
-                navigator.Clear();
+                var loginMenu = GetLoginMenu(navigator);
+                var registrationMenu = GetRegistrationMenu(navigator, loginMenu);
+                LinkLoginToRegistration(loginMenu, registrationMenu, navigator);
                 
+                navigator.NavigateTo(loginMenu);
+                navigator.Clear();
             })
         });
     }
     
     // CLIENT
-
     public IMenu CreateMenuForClient(MenuNavigator navigator, Client client)
     {
         return new ConsoleMenu("Please make a choice from the menu below:", new IMenuItem[]
         {
             new ActionMenuItem("Display your user information", () =>
             {
-                DisplayUserInformation(client);
-                // TODO: HIGH COUPLING. WE SHOULDN'T BE DIRECTELY UPDATING THE X, Y LOCATION. HAVE A METHOD THAT SETS THESE.
-                // REFER TO LECTURE SLIDES FOR WK 10 IF NOT SURE!!!!
-                
-                Console.WriteLine($"Restaurant name: {client.RestaurantName}");
-                Console.WriteLine($"Restaurant style: {client.RestaurantStyle}");
-                Console.WriteLine($"Restaurant location: {client.GetRestaurantLocation()}");
+                _userDisplayService.DisplayClientInformation(client);
             }),
             new ActionMenuItem("List orders available to deliver", () =>
             {
+                // TODO: Implement order listing for client
             }),
             new ActionMenuItem("Arrived at restaurant to pick up order", () =>
             {
+                // TODO: Implement restaurant-related functionality
             }),
             new ActionMenuItem("Mark this delivery as complete", () =>
             {
+                // TODO: Implement order completion for client
             }),
             new ActionMenuItem("Log out", () =>
             {
                 _userManager.Logout();
                 Console.WriteLine("You are now logged out.");
                 
-                // If a user has logged out. We want to clear the navigation history. And then redirect them to the login page.
-                // This will help solve issue so that a user can't redirect themselves back as a logged-in user?
-                navigator.NavigateTo(CreateLoginMenu(navigator, _userManager, _loginMenu));
-                navigator.Clear();
+                var loginMenu = GetLoginMenu(navigator);
+                var registrationMenu = GetRegistrationMenu(navigator, loginMenu);
+                LinkLoginToRegistration(loginMenu, registrationMenu, navigator);
                 
+                navigator.NavigateTo(loginMenu);
+                navigator.Clear();
             })
         });
-    }
-    
-    // TODO: This function will need to be refactored into an abstract class like "UserServices" or ask ChatGPT
-    // Do this for all the functions in here and have them in classes that have same functionality.
-    // Function to display the user details
-    void DisplayUserInformation(IUser user)
-    {
-        Console.WriteLine("Your user details are as follows:");
-        Console.WriteLine($"Name: {user.Name}");
-        Console.WriteLine($"Age: {user.Age}");
-        Console.WriteLine($"Email: {user.Email}");
-        Console.WriteLine($"Mobile: {user.Mobile}");
     }
 }

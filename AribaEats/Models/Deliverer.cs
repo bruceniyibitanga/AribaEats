@@ -17,20 +17,21 @@ namespace AribaEats.Models
         public string Password { get; set; }
         public Location Location { get; set; }
         
-        public string LicensePlate { get; set; }
+        public string LicencePlate { get; set; }
 
         public Deliverer()
         {
             
         }
 
-        public Deliverer(string name, int age, string email, string phone, string password)
+        public Deliverer(string name, int age, string email, string phone, string password, string licencePlate)
         {
             Name = name;
             Age = age;
             Email = email;
             Mobile = phone;
             Password = password;
+            LicencePlate = licencePlate;
         }
 
         public string GetCurrentDeliveryStatus()

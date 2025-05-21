@@ -17,7 +17,7 @@ public class CustomerRegistrar: IUserRegistrar<Customer>
     
     public Customer CollectUserInfo()
     {
-        return _inputCollector.CollectCustomerInformation();
+        return _inputCollector.CollectCustomerInfo();
     }
 
     public void Register(IUser user, MenuNavigator navigator, IMenu redirectTo)

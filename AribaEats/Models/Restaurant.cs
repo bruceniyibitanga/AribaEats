@@ -8,12 +8,13 @@ public class Restaurant
 {
     public string Id { get; private set; }
     public string Name { get; set; }
-    public Location Location { get; private set; }
+    public string Style { get; set; }
     public int Rating { get; private set; }
-
-    public Restaurant(string name, Location location)
+    
+    public Restaurant(string name, string style, int rating)
     {
         Name = name;
-        Location = location;
+        Rating = rating;
+        Style = style;
     }
 }

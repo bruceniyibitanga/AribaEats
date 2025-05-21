@@ -102,4 +102,10 @@ public class UserValidationService
         // Regex to check length and allowed characters (uppercase letters, numbers, and spaces)
         return Regex.IsMatch(input, @"^[A-Z0-9 ]{1,8}$") && !string.IsNullOrWhiteSpace(input);
     }
+
+    public bool IsValidRestaurantName(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input)) return false;
+        return true;
+    }
 }

@@ -6,4 +6,5 @@ namespace AribaEats.Models;
 public interface IMenuFactory
 {
     IMenu CreateMenuFor(IUser user, MenuNavigator navigator);
+    IMenu GetLoginMenu(MenuNavigator navigator);
 }

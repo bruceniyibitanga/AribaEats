@@ -16,8 +16,8 @@ public class DelivererRegistrar : IUserRegistrar<Deliverer>
     }
 
     public Deliverer CollectUserInfo()
-    {
-        return _inputCollector.CollectDelivererInputInfo();
+    { 
+        return _inputCollector.CollectDelivererInfo();
     }
     
     public void Register(IUser user, MenuNavigator navigator, IMenu redirectTo)
