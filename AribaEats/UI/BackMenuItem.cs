@@ -5,23 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AribaEats.Models.ConsoleFiles
+namespace AribaEats.UI
 {
-    public class ActionMenuItem : IMenuItem
+    public class BackMenuItem : IMenuItem
     {
-        private readonly Action _action;
         public string text { get; }
+        private readonly MenuNavigator _navigator;
 
-        public ActionMenuItem(string text, Action action)
+        public BackMenuItem(string text, MenuNavigator navigator)
         {
             this.text = text;
-            _action = action;
-            
+            _navigator = navigator;
         }
-        
+
         public void Execute()
         {
-            _action();
+            _navigator.NavigateBack();
         }
     }
 }

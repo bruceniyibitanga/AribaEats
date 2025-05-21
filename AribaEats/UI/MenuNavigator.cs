@@ -1,11 +1,5 @@
 ﻿using AribaEats.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AribaEats.Models.ConsoleFiles
+namespace AribaEats.UI
 {
     public class MenuNavigator
     {

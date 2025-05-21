@@ -1,4 +1,6 @@
-namespace AribaEats.Models;
+using AribaEats.Models;
+
+namespace AribaEats.Services;
 
 public class RestaurantManager
 {

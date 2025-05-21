@@ -1,11 +1,6 @@
 ﻿using AribaEats.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AribaEats
+namespace AribaEats.UI
 {
     internal class ConsoleMenu : IMenu
     {

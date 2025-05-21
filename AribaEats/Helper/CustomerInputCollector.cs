@@ -1,4 +1,7 @@
-namespace AribaEats.Models;
+using AribaEats.Models;
+using AribaEats.Services;
+
+namespace AribaEats.Helper;
 
 public class CustomerInputCollector :BaseUserInputCollector
 {

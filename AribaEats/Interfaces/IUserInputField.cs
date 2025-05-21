@@ -1,6 +1,7 @@
-using AribaEats.Interfaces;
+using AribaEats.Models;
+using AribaEats.Services;
 
-namespace AribaEats.Models;
+namespace AribaEats.Interfaces;
 
 public interface IUserInputField
 {

@@ -1,6 +1,6 @@
-using AribaEats.Interfaces;
+using AribaEats.Models;
 
-namespace AribaEats.Models;
+namespace AribaEats.Interfaces;
 
 public interface IUserDisplayService
 {

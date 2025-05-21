@@ -1,4 +1,4 @@
-using AribaEats.Models.ConsoleFiles;
+using AribaEats.UI;
 
 namespace AribaEats.Interfaces;
 

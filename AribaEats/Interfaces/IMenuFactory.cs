@@ -1,7 +1,6 @@
-using AribaEats.Interfaces;
-using AribaEats.Models.ConsoleFiles;
+using AribaEats.UI;
 
-namespace AribaEats.Models;
+namespace AribaEats.Interfaces;
 
 public interface IMenuFactory
 {

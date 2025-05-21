@@ -1,7 +1,9 @@
 using AribaEats.Interfaces;
-using AribaEats.Models.ConsoleFiles;
+using AribaEats.Models;
+using AribaEats.Services;
+using AribaEats.UI;
 
-namespace AribaEats.Models;
+namespace AribaEats.Helper;
 
 public class CustomerRegistrar: IUserRegistrar<Customer>
 {

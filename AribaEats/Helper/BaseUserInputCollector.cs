@@ -1,5 +1,8 @@
 using AribaEats.Interfaces;
-namespace AribaEats.Models;
+using AribaEats.Models;
+using AribaEats.Services;
+
+namespace AribaEats.Helper;
 
 public abstract class BaseUserInputCollector
 {

@@ -1,7 +1,9 @@
 ﻿using AribaEats;
+using AribaEats.Factory;
 using AribaEats.Interfaces;
 using AribaEats.Models;
-using AribaEats.Models.ConsoleFiles;
+using AribaEats.Services;
+using AribaEats.UI;
 
 var userManager = new UserManager();
 var restaurantManager = new RestaurantManager();

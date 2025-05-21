@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace AribaEats.Models;
+namespace AribaEats.Services;
 
 public class UserValidationService
 {
