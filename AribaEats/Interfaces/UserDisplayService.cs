@@ -17,7 +17,7 @@ public class UserDisplayService  : IUserDisplayService
     {
         DisplayBasicUserInformation(customer);
         Console.WriteLine($"Location: {customer.Location.X},{customer.Location.Y}");
-        Console.WriteLine(customer.GetOrderSummary());
+        Console.WriteLine(customer.GetOrderSummary(customer.Id));
     }
     
     public void DisplayDelivererInformation(Deliverer deliverer)

@@ -14,8 +14,7 @@ namespace AribaEats.UI
         }
         public void Display()
         {
-            //Console.Clear();
-            Console.WriteLine($"{_menuTitle}");
+            if (!string.IsNullOrWhiteSpace(_menuTitle)) Console.WriteLine($"{_menuTitle}");
 
             for(var i = 0; i < _menuItems.Length; i++)
             {

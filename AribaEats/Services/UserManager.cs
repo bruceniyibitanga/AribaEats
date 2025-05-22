@@ -1,4 +1,5 @@
-﻿using AribaEats.Interfaces;
+﻿using AribaEats.Helper;
+using AribaEats.Interfaces;
 using AribaEats.Models;
 
 namespace AribaEats.Services
@@ -17,13 +18,6 @@ namespace AribaEats.Services
                 .Concat(_deliverers)
                 .FirstOrDefault(user => user.Email == email);
         }
-        
-        public bool DoesUserExist(string email)
-        {
-            
-            return _customers.Any(e => e.Email == email) | _deliverers.Any(e => e.Email == email) | _clients.Any(e => e.Email == email);
-        }
-        
         public bool IsEmailUnique(string email)
         {
             return !_customers.Any(e => e.Email == email) && !_deliverers.Any(e => e.Email == email) && !_clients.Any(e => e.Email == email);
@@ -70,18 +64,10 @@ namespace AribaEats.Services
             _clients.Add(client);
             return true;
         }
-        public Client LoginAsClient(string email, string password)
-        {
-            bool isUser = DoesUserExist(email);
-
-            if (!isUser) return new Client();
-            
-            // Try login user with password
-            return _clients.SingleOrDefault(e => e.Email == email && e.Password == password);
-        }
 
         public void Logout()
         {
+            SessionState.HasVisitedOrderScreen = false;
             currentUser = null;
         }
     }

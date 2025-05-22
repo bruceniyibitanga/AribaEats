@@ -2,18 +2,16 @@ namespace AribaEats.Models;
 
 public class OrderItem
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
     public int OrderId { get; set; }
-    public int MenuItemId { get; set; }
+    public string MenuItemId { get; set; }
     public int Quantity { get; set; }
-    
-    // Reference navigation properties
+    public decimal? UnitPrice => RestaurantMenuItem?.Price;
     public Order Order { get; set; }
-    public MenuItem MenuItem { get; set; }
+    public RestaurantMenuItem RestaurantMenuItem { get; set; }
     
-    // Methods
     public decimal CalculateSubtotal()
     {
-        return MenuItem.Price * Quantity;
+        return (UnitPrice ?? 0) * Quantity;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AribaEats;
 using AribaEats.Factory;
+using AribaEats.Helper;
 using AribaEats.Interfaces;
 using AribaEats.Models;
 using AribaEats.Services;
@@ -7,11 +8,19 @@ using AribaEats.UI;
 
 var userManager = new UserManager();
 var restaurantManager = new RestaurantManager();
-var orderManager = new OrderManager(restaurantManager);
+var orderManager = new OrderManager(restaurantManager, userManager);
 var userDisplayService = new UserDisplayService();
+var orderScreenFactory = new OrderScreenFactory(orderManager, restaurantManager);
+var restaurantMenuFactory = new RestaurantMenuFactory(restaurantManager, orderScreenFactory);
 
 // Create the menu factory (no longer passing registration menu as a parameter)
-var menuFactory = new MenuFactory(userManager, restaurantManager, orderManager, userDisplayService);
+var menuFactory = new MenuFactory(
+    userManager, 
+    restaurantManager, 
+    orderManager, 
+    userDisplayService,
+    restaurantMenuFactory
+);
 
 // Create the navigator with null initial menu
 var navigator = new MenuNavigator(null);

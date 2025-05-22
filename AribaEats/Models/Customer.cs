@@ -9,7 +9,7 @@ namespace AribaEats.Models
 {
     public class Customer : IUser
     {
-        public string Id { get ; set ; }
+        public string Id { get ; set ; } = Guid.NewGuid().ToString();
         public string Name { get ; set; }
         public int Age { get; set; }
         public string Email { get; set; }
@@ -32,8 +32,6 @@ namespace AribaEats.Models
         }
         
         private List<Order> _orders = new List<Order>();
-        public IReadOnlyCollection<Order> Orders => _orders.AsReadOnly();
-        
         public void AddOrder(Order order)
         {
             if (order != null && order.CustomerId == Id)
@@ -50,11 +48,16 @@ namespace AribaEats.Models
         public decimal GetTotalSpent()
         {
             return _orders
-                .Where(order => order.Status == OrderStatus.Delivered) // Only count delivered orders
-                .Sum(order => order.TotalAmount); // Use a stored total amount
+                .Where(order => order.Status == OrderStatus.Delivered) 
+                .Sum(order => order.TotalAmount);
+        }
+
+        public void AddOrderToPurchaseHistory(Order order)
+        {
+            _orders.Add(order);
         }
         
-        public string GetOrderSummary()
+        public string GetOrderSummary(string customerId)
         {
             int orderCount = GetOrderCount();
             decimal totalSpent = GetTotalSpent();

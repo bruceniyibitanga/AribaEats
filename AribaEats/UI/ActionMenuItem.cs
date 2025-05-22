@@ -11,7 +11,6 @@ namespace AribaEats.UI
         {
             this.text = text;
             _action = action;
-            
         }
         
         public void Execute()

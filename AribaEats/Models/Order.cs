@@ -2,6 +2,7 @@ namespace AribaEats.Models;
 
 public enum OrderStatus
 {
+    Draft,
     Ordered,   // Initial state when customer places an order
     Accepted,  // Restaurant has seen and accepted the order
     Cooking,   // Restaurant has started preparing the food
@@ -19,13 +20,27 @@ public class Order
     public string CustomerId { get; set; }
     public string RestaurantId { get; set; }
     public string? DelivererId { get; set; }
-    public OrderStatus Status { get; set; } = OrderStatus.Ordered;
+    public OrderStatus Status { get; set; } = OrderStatus.Draft;
     public DateTime OrderTime { get; set; }
-    public decimal TotalAmount { get; set; }
+    public decimal TotalAmount => OrderItems?.Sum(item => item.CalculateSubtotal()) ?? 0;
+
     
     // Navigation properties
     public Customer Customer { get; set; }
     // public Restaurant Restaurant { get; set; }
     public Deliverer Deliverer { get; set; }
     public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+
+    public void AddItem(RestaurantMenuItem menuItem, int quantity)
+    {
+        
+        OrderItems.Add(new OrderItem
+        {
+            Id = (OrderItems.Count + 1).ToString(),
+            MenuItemId = menuItem.Id,
+            RestaurantMenuItem = menuItem,
+            Quantity = quantity
+        });
+    }
+
 }

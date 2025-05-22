@@ -205,6 +205,8 @@ public class LocationInputField : IUserInputField
             {
                 Console.WriteLine("Invalid location.");
             }
+            if(isValid && user.GetType() == typeof(Client)) 
+                ((Client)user).Restaurant.Location = ((Client)user).Restaurant.Location = ((Client)user).Location;
         }
     }
 }
@@ -241,11 +243,21 @@ public class RestaurantNameInputField :IUserInputField
     public void Collect(IUser user, UserValidationService validationService)
     {
         bool isValid = false;
+        var restaurant = new Restaurant();
         while (!isValid)
         {
             string input = _getInput();
             isValid = validationService.IsValidRestaurantName(input);
-            if (isValid && user.GetType() == typeof(Client)) ((Client)user).Restaurant.Name = input;
+            if (isValid && user.GetType() == typeof(Client))
+            {
+                // If all checks are valid we want to update the clients Restaurant
+                ((Client)user).Restaurant = restaurant;
+                ((Client)user).Restaurant.Name = input;
+                
+                //TODO: May need to refactor. Doing more than one thing
+                ((Client)user).Restaurant.ClientId = user.Id;
+            }
+            
             else Console.WriteLine("Invalid restaurant name.");
         }
     }
