@@ -40,7 +40,7 @@ public class OrderScreenFactory
 
     public IMenu CreateRestarantMenuViewScreen(MenuNavigator navigator, Customer customer, Restaurant restaurant)
     {
-        var draftOrder = _orderManager.CreateDraftOrder(customer.Id, restaurant.Id);
+        var draftOrder = _orderManager.CreateDraftOrder(customer, restaurant);
 
         Console.WriteLine($"Current order total: ${draftOrder.TotalAmount:F2}");
 

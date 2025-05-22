@@ -67,7 +67,7 @@ namespace AribaEats.Services
 
         public void Logout()
         {
-            SessionState.HasVisitedOrderScreen = false;
+            SessionState.Reset();
             currentUser = null;
         }
     }

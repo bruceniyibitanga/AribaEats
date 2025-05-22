@@ -27,7 +27,7 @@ public class Order
     
     // Navigation properties
     public Customer Customer { get; set; }
-    // public Restaurant Restaurant { get; set; }
+    public Restaurant Restaurant { get; set; }
     public Deliverer Deliverer { get; set; }
     public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 

@@ -39,15 +39,17 @@ public class OrderManager
 
         return statusMessages.ToList();
     }
-    public Order CreateDraftOrder(string customerId, string restaurantId)
+    public Order CreateDraftOrder(Customer customer, Restaurant restaurant)
     {
         var order = new Order()
         {
             Id = (_orders.Count + 1).ToString(),
-            CustomerId = customerId,
-            RestaurantId = restaurantId,
+            CustomerId = customer.Id,
+            RestaurantId = restaurant.Id,
             Status = OrderStatus.Draft,
             OrderTime = DateTime.Now,
+            Restaurant = restaurant,
+            Customer = customer,
         };
         
         _orders.Add(order);
@@ -92,7 +94,7 @@ public class OrderManager
 
     public List<Order> GetAllDeliverableOrders()
     {
-        return _orders.Where(x => x.Status == OrderStatus.Cooked).ToList();
+        return _orders.Where(x => x.Status == OrderStatus.Ordered).ToList();
     }
 }
 

@@ -1,3 +1,4 @@
+using AribaEats.Helper;
 using AribaEats.Interfaces;
 using AribaEats.Models;
 using AribaEats.Services;
@@ -56,7 +57,8 @@ public class RestaurantMenuFactory :IRestaurantMenuFactory
             {
                 restaurant.Name,
                 restaurant.Location.ToString(),
-                CalculateDistance(restaurant, customer).ToString(),
+                ReusableFunctions.CalculateDistance((restaurant.Location.X, restaurant.Location.Y).ToTuple(),
+                    (customer.Location.X, customer.Location.Y).ToTuple()).ToString(),
                 restaurant.Style ?? "Unknown",
                 FormatRating(restaurant.Rating)
             };
@@ -79,13 +81,6 @@ public class RestaurantMenuFactory :IRestaurantMenuFactory
             "rating" => restaurants.OrderByDescending(r => r.Rating),
             _ => restaurants.OrderBy(r => r.Name)
         };
-    }
-    
-    private int CalculateDistance(Restaurant restaurant, Customer customer)
-    {
-        int xDiff = Math.Abs(restaurant.Location.X - customer.Location.X);
-        int yDiff = Math.Abs(restaurant.Location.Y - customer.Location.Y);
-        return xDiff + yDiff;
     }
 
     private string FormatRating(double? rating)

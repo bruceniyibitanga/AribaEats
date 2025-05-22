@@ -12,14 +12,17 @@ var orderManager = new OrderManager(restaurantManager, userManager);
 var userDisplayService = new UserDisplayService();
 var orderScreenFactory = new OrderScreenFactory(orderManager, restaurantManager);
 var restaurantMenuFactory = new RestaurantMenuFactory(restaurantManager, orderScreenFactory);
-
+var delivererManager = new DelivererManager(orderManager, restaurantManager);
+var delivererScreenFactory = new DelivererScreenFactory(orderManager, delivererManager);
 // Create the menu factory (no longer passing registration menu as a parameter)
 var menuFactory = new MenuFactory(
     userManager, 
     restaurantManager, 
     orderManager, 
     userDisplayService,
-    restaurantMenuFactory
+    restaurantMenuFactory,
+    delivererManager,
+    delivererScreenFactory
 );
 
 // Create the navigator with null initial menu

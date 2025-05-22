@@ -14,19 +14,25 @@ public class MenuFactory : IMenuFactory
     private readonly OrderManager _orderManager;
     private readonly UserDisplayService _userDisplayService;
     private readonly IRestaurantMenuFactory _restaurantMenuFactory;
+    private readonly DelivererManager _delivererManager;
+    private readonly DelivererScreenFactory _delivererScreenFactory;
         
     public MenuFactory(
         UserManager userManager, 
         RestaurantManager restaurantManager, 
         OrderManager orderManager, 
         UserDisplayService userDisplayService,
-        IRestaurantMenuFactory restaurantMenuFactory)
+        IRestaurantMenuFactory restaurantMenuFactory, 
+        DelivererManager delivererManager,
+        DelivererScreenFactory delivererScreenFactory)
     {
         _userManager = userManager;
         _restaurantManager = restaurantManager;
         _orderManager = orderManager;
         _userDisplayService = userDisplayService;
         _restaurantMenuFactory = restaurantMenuFactory;
+        _delivererManager = delivererManager;
+        _delivererScreenFactory = delivererScreenFactory;
     }
     
     public IMenu CreateMenuFor(IUser user, MenuNavigator navigator)
@@ -198,9 +204,13 @@ public class MenuFactory : IMenuFactory
             }),
             new ActionMenuItem("List orders available to deliver", () =>
             {
-                var orders = _orderManager.GetAllDeliverableOrders();
+                if (!_delivererManager.IsAvailable(deliverer))
+                {
+                    Console.WriteLine("You have already selected an order for delivery");
+                    return;
+                };
                 
-                
+                navigator.NavigateTo(_delivererScreenFactory.CreateAvailableDeliveriesScreen(navigator, deliverer));
             }),
             new ActionMenuItem("Arrived at restaurant to pick up order", () =>
             {
