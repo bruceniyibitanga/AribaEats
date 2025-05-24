@@ -13,7 +13,7 @@ public class MenuFactory : IMenuFactory
     private readonly RestaurantManager _restaurantManager;
     private readonly OrderManager _orderManager;
     private readonly UserDisplayService _userDisplayService;
-    private readonly IRestaurantMenuFactory _restaurantMenuFactory;
+    private readonly RestaurantMenuFactory _restaurantMenuFactory;
     private readonly DelivererManager _delivererManager;
     private readonly DelivererScreenFactory _delivererScreenFactory;
         
@@ -22,7 +22,7 @@ public class MenuFactory : IMenuFactory
         RestaurantManager restaurantManager, 
         OrderManager orderManager, 
         UserDisplayService userDisplayService,
-        IRestaurantMenuFactory restaurantMenuFactory, 
+        RestaurantMenuFactory restaurantMenuFactory, 
         DelivererManager delivererManager,
         DelivererScreenFactory delivererScreenFactory)
     {
@@ -141,21 +141,27 @@ public class MenuFactory : IMenuFactory
             }),
             new ActionMenuItem("See the status of your orders", () =>
             {
-                if (customer.GetOrderCount() == 0) Console.WriteLine("You have not placed any orders.");
-                var orderStatuses = _orderManager.GetOrderStatuses(customer.Id);
-
-                foreach (var orderStatus in orderStatuses)
+                if (customer.GetOrderCount() == 0)
                 {
-                    Console.WriteLine(orderStatus);
+                    Console.WriteLine("You have not placed any orders.");
                 }
+                else
+                {
+                    var orderStatuses = _orderManager.GetOrderStatuses(customer.Id);
+                    foreach (var status in orderStatuses)
+                    {
+                        Console.WriteLine(status);
+                    }
+                }
+
             }),
             new ActionMenuItem("Rate a restaurant you've ordered from", () =>
             {
-                navigator.NavigateTo(CreateRestaurantOrderedFromMenu(navigator, customer, _orderManager));
+                navigator.NavigateTo(CreateRateRestaurantOrderedFromMenu(navigator, customer, _orderManager));
             }),
             new ActionMenuItem("Log out", () =>
             {
-                _userManager.Logout();
+                _userManager.Logout(customer.Id);
                 Console.WriteLine("You are now logged out.");
                     
                 var loginMenu = GetLoginMenu(navigator);
@@ -171,18 +177,22 @@ public class MenuFactory : IMenuFactory
         return menu;
     }
     
-    private IMenu CreateRestaurantOrderedFromMenu(MenuNavigator navigator, Customer customer, OrderManager orderManager)
+    private IMenu CreateRateRestaurantOrderedFromMenu(MenuNavigator navigator, Customer customer, OrderManager orderManager)
     {
-        List<string> orderedOrderStatuses = orderManager.GetOrderStatuses(customer.Id);
+        List<Order> previousOrderedList = _orderManager.GetCustomerOrderHistory(customer);
     
         var menuItems = new List<IMenuItem>();
     
-        foreach (var orderStatus in orderedOrderStatuses)
+        foreach (var item in previousOrderedList)
         {
-            menuItems.Add(new ActionMenuItem(orderStatus, () =>
+            menuItems.Add(new ActionMenuItem($"Order #{item.Id} from {item.Restaurant.Name}", () =>
             {
-                // TODO: Implement rating functionality
+                Console.WriteLine($"You are rating order #{item.Id} from {item.Restaurant.Name}");
             }));
+            foreach (var food in item.OrderItems)
+            {
+                Console.WriteLine($"{food.Quantity} x {food.RestaurantMenuItem.Name}");
+            }
         }
     
         menuItems.Add(new BackMenuItem("Return to the previous menu", navigator));
@@ -201,6 +211,8 @@ public class MenuFactory : IMenuFactory
             new ActionMenuItem("Display your user information", () =>
             {
                 _userDisplayService.DisplayDelivererInformation(deliverer);
+                var status = _delivererManager.GetCurrentDeliveryStatus(deliverer);
+                if(!string.IsNullOrWhiteSpace(status))Console.WriteLine(status);
             }),
             new ActionMenuItem("List orders available to deliver", () =>
             {
@@ -214,15 +226,15 @@ public class MenuFactory : IMenuFactory
             }),
             new ActionMenuItem("Arrived at restaurant to pick up order", () =>
             {
-                // TODO: Implement order pickup
+                _delivererScreenFactory.ShowArrivedAtRestaurantScreen(navigator, deliverer);
             }),
             new ActionMenuItem("Mark this delivery as complete", () =>
             {
-                // TODO: Implement order completion
+                _delivererScreenFactory.CreateCompleteDeliveryScreen(navigator, deliverer);
             }),
             new ActionMenuItem("Log out", () =>
             {
-                _userManager.Logout();
+                _userManager.Logout(deliverer.Id);
                 Console.WriteLine("You are now logged out.");
                 
                 var loginMenu = GetLoginMenu(navigator);
@@ -253,17 +265,25 @@ public class MenuFactory : IMenuFactory
             }),
             new ActionMenuItem("See current orders", () =>
             {
-                // TODO: Implement restaurant-related functionality
+                // TODO: THIS IS DEFINITELY NOT A CLEARN SOLUTION. THE FUNCTION SHOULD BE DISPLAYING BUT IT IS IN FACT RETURN A LIST IMENUITEMS
+                _restaurantMenuFactory.ShowCurrentOrderScreen(navigator, client);
             }),
             new ActionMenuItem("Start cooking order", () =>
             {
-                // TODO: Implement order completion for client
+                // TODO: These function need a complete refactor! Very messy and don't like the sumation function...
+                navigator.NavigateTo(_restaurantMenuFactory.CreateSelectOrderToCookScreen(navigator, client));
             }),
-            new ActionMenuItem("Finish cooking order", () => {}),
-            new ActionMenuItem("Handle deliverers who have arrived", () => {}),
+            new ActionMenuItem("Finish cooking order", () =>
+            {
+                navigator.NavigateTo(_restaurantMenuFactory.CreateOrderFinishedCookingScreen(navigator, client));
+            }),
+            new ActionMenuItem("Handle deliverers who have arrived", () =>
+            {
+                navigator.NavigateTo(_restaurantMenuFactory.CreateHandleMultpleDeliverersArrivalScreen(navigator, client));
+            }),
             new ActionMenuItem("Log out", () =>
             {
-                _userManager.Logout();
+                _userManager.Logout(client.Id);
                 Console.WriteLine("You are now logged out.");
                 
                 var loginMenu = GetLoginMenu(navigator);

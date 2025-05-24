@@ -24,6 +24,26 @@ public class RestaurantManager
         _restaurants.Add(restaurant);
     }
 
+    public void AddOrderToRestaurantOrderList(Restaurant restaurant, Order order)
+    {
+        restaurant.AddOrderToList(order);
+    }
+
+    public List<Order> GetRestaurantOrdersInCooking(Restaurant restaurant)
+    {
+        return restaurant.GetAllOrdersThatAreCooking();
+    }
+
+    public List<Order> GetAllorderThatAreReadyForDelivery(Restaurant restaurant)
+    {
+        return restaurant.GetAllorderThatAreReadyForDelivery(restaurant);
+    }
+
+    public void UpdateRestaurantOrderStatus(Restaurant restaurant, Order order)
+    {
+        restaurant.UpdateOrderStatus(order);
+    }
+
     public List<RestaurantMenuItem> GetRestaurantMenuItems(string restaurantId)
     {
         var restaurant = GetRestaurantById(restaurantId);

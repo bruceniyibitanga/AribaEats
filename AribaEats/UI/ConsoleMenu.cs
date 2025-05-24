@@ -6,11 +6,16 @@ namespace AribaEats.UI
     {
         private readonly string _menuTitle;
         private readonly IMenuItem[] _menuItems;
+        private readonly bool _showRowNumbers;
+        private readonly bool _showLastPrompt;
 
-        public ConsoleMenu(string menuTitle, IMenuItem[] menuItems)
+
+        public ConsoleMenu(string menuTitle, IMenuItem[] menuItems, bool showRowNumbers = true, bool showLastPrompt = true)
         {
-            this._menuTitle = menuTitle;
-            this._menuItems = menuItems;
+            _menuTitle = menuTitle;
+            _menuItems = menuItems;
+            _showRowNumbers = showRowNumbers;
+            _showLastPrompt = showLastPrompt;
         }
         public void Display()
         {
@@ -18,9 +23,9 @@ namespace AribaEats.UI
 
             for(var i = 0; i < _menuItems.Length; i++)
             {
-                Console.WriteLine($"{i + 1}: {_menuItems[i].text}");
+                Console.WriteLine(_showRowNumbers ? $"{i + 1}: {_menuItems[i].text}": $"{_menuItems[i].text}");
             }
-            Console.WriteLine($"Please enter a choice between 1 and {_menuItems.Length}:");
+            if(_showLastPrompt) Console.WriteLine($"Please enter a choice between 1 and {_menuItems.Length}:");
         }
 
         public void EditMenuItem(int menuLocation, IMenuItem newMenuItem)

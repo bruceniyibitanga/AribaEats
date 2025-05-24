@@ -50,6 +50,8 @@ public class DelivererScreenFactory
             var actionItem = new ActionMenuItem(order.CustomerId, () =>
             {
                 _delivererManager.AcceptDelivery(deliverer, order);
+                _delivererManager.UpdateDelivererStatus(deliverer);
+                Console.WriteLine($"Thanks for accepting the order. Please head to {order.Restaurant.Name} at {order.Restaurant.Location.X},{order.Restaurant.Location.Y} to pick it up.");
                 navigator.NavigateHome("deliverer");
             });
             
@@ -74,6 +76,90 @@ public class DelivererScreenFactory
         
         return menu;
     }
+
+    public IMenu ShowArrivedAtRestaurantScreen(MenuNavigator navigator, Deliverer deliverer)
+    {
+        List<Order> orders = _delivererManager.GetAllOrdersAssignedToDriver(deliverer);
+
+        // No order accepted
+        if (orders == null || orders.Count == 0)
+        {
+            Console.WriteLine("You have not yet accepted an order.");
+            navigator.NavigateHome("deliverer");
+        }
+
+        Order order = orders[0]; // Assuming one active order per deliverer
+
+        // Already picked up
+        if (order.Status == OrderStatus.InTransit | order.Status == OrderStatus.PickedUp | order.Status == OrderStatus.Delivered)
+        {
+            Console.WriteLine("You have already picked up this order.");
+            navigator.NavigateHome("deliverer");
+        }
+
+        // Already marked as arrived
+        if (deliverer.Status == DelivererStatus.ArrivedAtRestaurant)
+        {
+            Console.WriteLine("You already indicated that you have arrived at this restaurant.");
+            navigator.NavigateHome("deliverer");
+        }
+
+        // Valid arrival
+        Console.WriteLine($"Thanks. We have informed {order.Restaurant.Name} that you have arrived and are ready to pick up order #{order.Id}.");
+        Console.WriteLine("Please show the staff this screen as confirmation.");
+
+        if (order.Status == OrderStatus.Ordered || order.Status == OrderStatus.Cooking)
+        {
+            Console.WriteLine("The order is still being prepared, so please wait patiently until it is ready.");
+        }
+
+        var customer = order.Customer;
+        Console.WriteLine($"When you have the order, please deliver it to {customer.Name} at {customer.Location.X},{customer.Location.Y}.");
+
+        // Mark deliverer as arrived at restaurant
+        //TODO: DELIVERER STATUS = ARRIVED ARRIVED AT RESTAURANT
+        deliverer.UpdateDelivererStatus(deliverer);
+        
+        navigator.NavigateHome("deliverer");
+
+        return new ConsoleMenu("", new IMenuItem[]{new ActionMenuItem("", () => { })}, showRowNumbers:false, showLastPrompt:false);
+    }
+
+    public IMenu CreateCompleteDeliveryScreen(MenuNavigator navigator, Deliverer deliverer)
+    {
+        
+        List<Order> orders = _delivererManager.GetAllOrdersAssignedToDriver(deliverer);
+
+        // No order accepted
+        if (orders == null || orders.Count == 0)
+        {
+            Console.WriteLine("You have not yet accepted an order.");
+            navigator.NavigateHome("deliverer");
+        }
+
+        Order order = orders[0]; // Assuming one active order per deliverer
+
+        // Order not picked up yet
+        if (order.Status != OrderStatus.PickedUp)
+        {
+            Console.WriteLine("You have not yet picked up this order.");
+            navigator.NavigateHome("deliverer");
+        }
+
+        // Valid delivery completion
+        Console.WriteLine("Thank you for making the delivery.");
+
+        // Update order and deliverer status
+        _orderManager.UpdateStatusOfOrder(order, order.Restaurant);
+
+        _delivererManager.UpdateDelivererStatus(deliverer);
+        
+        // Remove the order from _assignedOrders
+        _delivererManager.RemoveOrderAssignment(deliverer);
+        
+        navigator.NavigateHome("deliverer");
+        return new ConsoleMenu("", new IMenuItem[]{new ActionMenuItem("", () => { })}, showRowNumbers:false, showLastPrompt:false);
+    }
     
     // TODO: This needs to be refactored out. Repetition of Logic in User Validation Service
     private bool IsValidLocation(string[] location)
@@ -87,6 +173,11 @@ public class DelivererScreenFactory
             if (!canParse) return false;
         }
 
+        return true;
+    }
+
+    private bool DriverConfirmationationScreen()
+    {
         return true;
     }
 }

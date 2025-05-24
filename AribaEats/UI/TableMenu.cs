@@ -7,12 +7,15 @@ public class TableMenu : IMenu
     private readonly string _menuTitle;
     private readonly IMenuItem[] _menuItems;
     private readonly TableConfiguration _tableConfig;
+    private readonly bool _showRowNumbers = true;
 
-    public TableMenu(string menuTitle, IMenuItem[] menuItems, TableConfiguration tableConfig)
+
+    public TableMenu(string menuTitle, IMenuItem[] menuItems, TableConfiguration tableConfig, bool showRowNumbers = true)
     {
         _menuTitle = menuTitle;
         _menuItems = menuItems;
         _tableConfig = tableConfig;
+        _showRowNumbers = showRowNumbers;
     }
     
     // Number Prefix in table - "1: " - is three characters long.
@@ -36,8 +39,7 @@ public class TableMenu : IMenu
                 }
                 else
                 {
-                    // Fallback for non-table items (like "Return to previous menu")
-                    Console.WriteLine($"{i + 1}: {menuItem.text}");
+                    Console.WriteLine(_showRowNumbers ? $"{i + 1}: {menuItem.text}" : menuItem.text);                
                 }
             }
 

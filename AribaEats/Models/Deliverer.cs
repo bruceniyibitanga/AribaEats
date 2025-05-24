@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 
 namespace AribaEats.Models
 {
+    public enum DelivererStatus
+    {
+        Free,
+        AcceptedOrder,
+        ArrivedAtRestaurant,
+        Enroute,
+        Delivered
+    }
     public class Deliverer : IUser
     {
         public string Id { get ; set ; }
@@ -16,27 +24,36 @@ namespace AribaEats.Models
         public string Mobile { get; set; }
         public string Password { get; set; }
         public Location Location { get; set; }
-        
+        public DelivererStatus Status { get; set; } = DelivererStatus.Free;
         public string LicencePlate { get; set; }
-
+        List<Order> orders = new List<Order>();
         public Deliverer()
         {
             
         }
 
-        public Deliverer(string name, int age, string email, string phone, string password, string licencePlate)
+        public void UpdateDelivererStatus(Deliverer deliverer)
         {
-            Name = name;
-            Age = age;
-            Email = email;
-            Mobile = phone;
-            Password = password;
-            LicencePlate = licencePlate;
-        }
-
-        public string GetCurrentDeliveryStatus()
-        {
-            return "IMPLEMENT!";
+            switch (deliverer.Status)
+            {
+                case DelivererStatus.Free:
+                    Status = DelivererStatus.AcceptedOrder;
+                    break;
+                case DelivererStatus.AcceptedOrder:
+                    Status = DelivererStatus.ArrivedAtRestaurant;
+                    break;
+                case DelivererStatus.ArrivedAtRestaurant:
+                    Status = DelivererStatus.Enroute;
+                    break;
+                case DelivererStatus.Enroute:
+                    Status = DelivererStatus.Delivered;
+                    break;
+                case DelivererStatus.Delivered:
+                    Status = DelivererStatus.Free;
+                    break;
+                default:
+                    throw new InvalidOperationException("Invalid previous status.");
+            }
         }
     }
 }

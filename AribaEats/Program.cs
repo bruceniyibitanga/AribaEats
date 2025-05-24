@@ -8,12 +8,14 @@ using AribaEats.UI;
 
 var userManager = new UserManager();
 var restaurantManager = new RestaurantManager();
-var orderManager = new OrderManager(restaurantManager, userManager);
 var userDisplayService = new UserDisplayService();
+var delivererManager = new DelivererManager(restaurantManager);
+var orderManager = new OrderManager(restaurantManager, userManager, delivererManager);
 var orderScreenFactory = new OrderScreenFactory(orderManager, restaurantManager);
-var restaurantMenuFactory = new RestaurantMenuFactory(restaurantManager, orderScreenFactory);
-var delivererManager = new DelivererManager(orderManager, restaurantManager);
 var delivererScreenFactory = new DelivererScreenFactory(orderManager, delivererManager);
+var restaurantMenuFactory = new RestaurantMenuFactory(restaurantManager, orderScreenFactory, orderManager);
+
+
 // Create the menu factory (no longer passing registration menu as a parameter)
 var menuFactory = new MenuFactory(
     userManager, 

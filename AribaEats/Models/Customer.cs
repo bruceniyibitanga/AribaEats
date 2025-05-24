@@ -32,13 +32,6 @@ namespace AribaEats.Models
         }
         
         private List<Order> _orders = new List<Order>();
-        public void AddOrder(Order order)
-        {
-            if (order != null && order.CustomerId == Id)
-            {
-                _orders.Add(order);
-            }
-        }
         
         public int GetOrderCount()
         {
@@ -48,13 +41,18 @@ namespace AribaEats.Models
         public decimal GetTotalSpent()
         {
             return _orders
-                .Where(order => order.Status == OrderStatus.Delivered) 
+                .Where(order => order.Status == OrderStatus.Ordered) 
                 .Sum(order => order.TotalAmount);
         }
 
         public void AddOrderToPurchaseHistory(Order order)
         {
             _orders.Add(order);
+        }
+
+        public List<Order> GetOrderHistory(Customer customer)
+        {
+            return _orders;
         }
         
         public string GetOrderSummary(string customerId)

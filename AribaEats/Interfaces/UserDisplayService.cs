@@ -24,7 +24,6 @@ public class UserDisplayService  : IUserDisplayService
     {
         DisplayBasicUserInformation(deliverer);
         Console.WriteLine($"Licence plate: {deliverer.LicencePlate}");
-        // Console.WriteLine(deliverer.GetCurrentDeliveryStatus());
     }
     
     public void DisplayClientInformation(Client client)

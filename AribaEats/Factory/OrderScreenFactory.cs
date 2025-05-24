@@ -19,14 +19,14 @@ public class OrderScreenFactory
     // Procesing Order Screen - Allows to add menu items to their order or cancel
     public IMenu CreateOrderProcessingScreen(MenuNavigator navigator, Customer customer, Restaurant restaurant)
     {
-        if(!SessionState.HasVisitedOrderScreen)
+        if (!SessionState.HasVisitedRestaurant(customer.Id, restaurant.Id))
         {
             Console.WriteLine($"Placing order from {restaurant.Name}.");
-            SessionState.HasVisitedOrderScreen = true;
+            SessionState.MarkRestaurantVisited(customer.Id, restaurant.Id);
         }
-        
+
         navigator.SetAnchor();
-        
+
         return new ConsoleMenu("", new IMenuItem[]
         {
             new ActionMenuItem("See this restaurant's menu and place an order", () =>
@@ -37,6 +37,7 @@ public class OrderScreenFactory
             new ActionMenuItem("Return to main menu", () => { navigator.NavigateHome("customer"); }),
         });
     }
+
 
     public IMenu CreateRestarantMenuViewScreen(MenuNavigator navigator, Customer customer, Restaurant restaurant)
     {
@@ -102,7 +103,6 @@ public class OrderScreenFactory
             Console.WriteLine("Invalid input.");
         }
     }
-
     
     // Status of Order
     
