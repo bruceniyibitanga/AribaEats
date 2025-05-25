@@ -1,19 +1,24 @@
 namespace AribaEats.Models;
 
+/// <summary>
+/// Represents the various states an order can go through from creation to delivery or cancellation.
+/// </summary>
+
 public enum OrderStatus
 {
-    Draft,
-    Ordered,   // Initial state when customer places an order
-    Accepted,  // Restaurant has seen and accepted the order
+    Draft,     // Initial state when customer places an order
+    Ordered,   // When order has been completed
     Cooking,   // Restaurant has started preparing the food
     Cooked,    // Food is ready for pickup
-    AssignedToDeliverer, // A deliverer has claimed the order
     PickedUp,  // Deliverer has picked up the order from restaurant
     InTransit, // Food is on the way to customer
     Delivered, // Order has been delivered to customer
-    Cancelled, // Order was cancelled
-    Rejected   // Restaurant rejected the order
 }
+
+/// <summary>
+/// Represents an order placed by a customer, capturing details such as items, status, and relationships with other entities like customer, restaurant, and deliverer.
+/// </summary>
+
 public class Order
 {
     public string Id { get; set; }
@@ -24,9 +29,8 @@ public class Order
     public OrderStatus Status { get; set; } = OrderStatus.Draft;
     public DateTime OrderTime { get; set; }
     public decimal TotalAmount => OrderItems?.Sum(item => item.CalculateSubtotal()) ?? 0;
-
     
-    // Navigation properties
+    // Reference and Navigation properties
     public Customer Customer { get; set; }
     public Restaurant Restaurant { get; set; }
     public  Deliverer? Deliverer { get; set; } 

@@ -1,45 +1,63 @@
-﻿using AribaEats;
-using AribaEats.Factory;
-using AribaEats.Helper;
-using AribaEats.Interfaces;
+﻿using AribaEats.Factory;
 using AribaEats.Models;
 using AribaEats.Services;
-using AribaEats.UI;
 
-var userManager = new UserManager();
-var restaurantManager = new RestaurantManager();
-var userDisplayService = new UserDisplayService();
-var delivererManager = new DelivererManager(restaurantManager);
-var orderManager = new OrderManager(restaurantManager, userManager, delivererManager);
-var orderScreenFactory = new OrderScreenFactory(orderManager, restaurantManager);
-var delivererScreenFactory = new DelivererScreenFactory(orderManager, delivererManager);
-var restaurantMenuFactory = new RestaurantMenuFactory(restaurantManager, orderScreenFactory, orderManager);
+// Initialize core service managers that handle different aspects of the application
+var userManager = new UserManager();                
+var restaurantManager = new RestaurantManager();    
+var userDisplayService = new UserDisplayService();  
 
+// Create delivery management system with restaurant integration
+var delivererManager = new DelivererManager();  
+                                                                
 
-// Create the menu factory (no longer passing registration menu as a parameter)
+// Initialize order processing system with all required dependencies
+var orderManager = new OrderManager(
+    restaurantManager,   
+    userManager,         
+    delivererManager);   
+
+// Set up UI factories for different sections of the application
+var orderScreenFactory = new OrderScreenFactory(
+    orderManager,        
+    restaurantManager);  
+
+var delivererScreenFactory = new DelivererScreenFactory(
+    orderManager,        
+    delivererManager);   
+
+var restaurantMenuFactory = new RestaurantMenuFactory(
+    restaurantManager,   
+    orderScreenFactory,  
+    orderManager);       
+
+// Create the main menu factory that coordinates all application screens
+// This factory is responsible for creating all main navigation menus and their interconnections
 var menuFactory = new MenuFactory(
-    userManager, 
-    restaurantManager, 
-    orderManager, 
-    userDisplayService,
-    restaurantMenuFactory,
-    delivererManager,
-    delivererScreenFactory
+    userManager,            
+    restaurantManager,      
+    orderManager,           
+    userDisplayService,     
+    restaurantMenuFactory,  
+    delivererManager,       
+    delivererScreenFactory  
 );
 
-// Create the navigator with null initial menu
+// Initialize the navigation system that manages menu transitions
+// Starts with null as the initial menu will be set after creating required menus
 var navigator = new MenuNavigator(null);
 
-// Get the login and registration menus from factory
+// Create and configure login process.
 var loginMenu = menuFactory.GetLoginMenu(navigator);
-var registrationMenu = menuFactory.GetRegistrationMenu(navigator, loginMenu);
+var registrationMenu = menuFactory.GetRegistrationMenu(navigator, loginMenu);  
 
-// Now we can link the login menu to registration menu
+// Set up navigation between authentication screens
+// This allows users to switch between login and registration as needed
 menuFactory.LinkLoginToRegistration(loginMenu, registrationMenu, navigator);
 
-// Set the initial menu to login
+// Configure the application to start at the login screen
 navigator.SetCurrentMenu(loginMenu);
 
+// Display welcome message and start the application's main loop
 Console.WriteLine("Welcome to Arriba Eats!");
-
-navigator.Start();
+navigator.Start();  // Begins the interactive menu system that handles user input and navigation

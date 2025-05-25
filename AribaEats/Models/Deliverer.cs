@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace AribaEats.Models
 {
+    /// <summary>
+    /// Represents the various statuses a deliverer can have during the order delivery process.
+    /// </summary>
     public enum DelivererStatus
     {
         Free,
@@ -31,7 +34,12 @@ namespace AribaEats.Models
         {
             
         }
-
+        
+        /// <summary>
+        /// Updates the status of the deliverer to the next logical stage in the delivery process.
+        /// </summary>
+        /// <param name="deliverer">The deliverer whose status needs to be updated.</param>
+        /// <exception cref="InvalidOperationException">Thrown if the current status is invalid.</exception>
         public void UpdateDelivererStatus(Deliverer deliverer)
         {
             switch (deliverer.Status)

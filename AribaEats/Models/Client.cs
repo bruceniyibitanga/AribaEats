@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace AribaEats.Models
 {
+    /// <summary>
+    /// Represents a client who operates a restaurant on the platform.
+    /// Implements the <see cref="IUser"/> interface.
+    /// </summary>
     public class Client : IUser
     {
         public string Id { get ; set ; } = Guid.NewGuid().ToString();
@@ -18,29 +22,9 @@ namespace AribaEats.Models
         public Restaurant Restaurant { get; set; } = new Restaurant();
         public Location Location { get; set; }
         
-        public Client()
-        {
-        }
-
-        public Client(string name, int age, string email, string phone, string password, string id, Location location)
-        {
-            Name = name;
-            Age = age;
-            Email = email;
-            Mobile = phone;
-            Password = password;
-            Location = location;
-            Restaurant.Location = location;
-        }
-
         public string GetRestaurantLocation()
         {
             return $"{Location.X},{Location.Y}";
-        }
-        
-        public void AddItemToMenu(RestaurantMenuItem item)
-        {
-            Restaurant.MenuItems.Add(item);
         }
 
         public List<RestaurantMenuItem> GetMenu()

@@ -1,5 +1,8 @@
 namespace AribaEats.Models;
 
+/// <summary>
+/// Represents an item on a restaurant's menu, including its unique identifier, name, and price.
+/// </summary>
 public class RestaurantMenuItem
 {
     public string Id { get; set; } = Guid.NewGuid().ToString();

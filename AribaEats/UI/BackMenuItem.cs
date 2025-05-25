@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace AribaEats.UI
 {
+    /// <summary>
+    /// Represents a menu item that facilitates navigation back to the previous menu.
+    /// </summary>
     public class BackMenuItem : IMenuItem
     {
         public string text { get; }

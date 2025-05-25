@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace AribaEats.Interfaces
 {
+    /// <summary>
+    /// Represents a user who can be registered on the platform.
+    /// </summary>
     public interface IUser
     {
         string Id { get ; set ; }

@@ -1,5 +1,9 @@
 namespace AribaEats.Models;
 
+/// <summary>
+/// Represents an individual item within an order (i.e. order line), including its details such as quantity, menu item, and pricing.
+/// By seperating the RestaurantMenuItem and the OrderItem allows an order to have different items from different restaurants.
+/// </summary>
 public class OrderItem
 {
     public string Id { get; set; }
