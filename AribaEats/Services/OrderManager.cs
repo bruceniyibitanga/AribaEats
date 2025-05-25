@@ -122,11 +122,15 @@ public class OrderManager
         return order;
     }
 
+    public void RateRestaurant()
+    {
+        
+    }
+
     public List<Order> GetCustomerOrderHistory(Customer customer)
     {
         return customer.GetOrderHistory(customer);
     }
-
 
     public Dictionary<Deliverer, Order> GetAllAssignedOrders(Restaurant restaurant)
     {
@@ -145,7 +149,13 @@ public class OrderManager
 
     public List<Order> GetAllDeliverableOrders()
     {
-        return _orders.Where(x => x.Status == OrderStatus.Cooked | x.Status == OrderStatus.Ordered).ToList();
+        return _orders
+            .Where(x =>
+                (x.Status == OrderStatus.Cooked || x.Status == OrderStatus.Ordered)
+                && x.Deliverer == null
+            )
+            .ToList();
     }
+
 }
 

@@ -16,7 +16,8 @@ public class DelivererScreenFactory
     }
     public IMenu CreateAvailableDeliveriesScreen(MenuNavigator navigator, Deliverer deliverer)
     {
-        
+        //If the deliverers staus is delivered and no assigned orders updated to Free
+        if(deliverer.Status == DelivererStatus.Delivered && _delivererManager.GetAllOrdersAssignedToDriver(deliverer).Count == 0) _delivererManager.UpdateDelivererStatus(deliverer);
         // TODO: THIS NEEDS TO BE REFACTORED OUT SOMEHOW
         bool isValid = false;
         Tuple<int, int> loc;
@@ -29,13 +30,15 @@ public class DelivererScreenFactory
             if (isValid)
             {
                 loc = (Convert.ToInt32(location[0]), Convert.ToInt32(location[1])).ToTuple();
+                deliverer.Location.X = loc.Item1;
+                deliverer.Location.Y = loc.Item2;
             }
             else
             {
                 Console.WriteLine("Invalid location.");
             }
         }
-
+        
         var orders = _orderManager.GetAllDeliverableOrders();
         List<IMenuItem> menuItems = new List<IMenuItem>();
         
@@ -55,8 +58,9 @@ public class DelivererScreenFactory
                 navigator.NavigateHome("deliverer");
             });
             
-            var distance = Helper.ReusableFunctions.CalculateDistance((order.Restaurant.Location.X, order.Restaurant.Location.Y).ToTuple(), (order.Customer.Location.X, order.Customer.Location.Y).ToTuple());
-
+            int toRestaurant = Helper.ReusableFunctions.CalculateDistance((deliverer.Location.X, deliverer.Location.Y).ToTuple(), (order.Restaurant.Location.X, order.Restaurant.Location.Y).ToTuple());
+            int toCustomer = Helper.ReusableFunctions.CalculateDistance((order.Restaurant.Location.X, order.Restaurant.Location.Y).ToTuple(), (order.Customer.Location.X, order.Customer.Location.Y).ToTuple());
+            int totalDistance = toRestaurant + toCustomer;
 
             var tableData = new string[]
             {
@@ -65,7 +69,7 @@ public class DelivererScreenFactory
                 order.Restaurant.Location.ToString(),
                 order.Customer.Name,
                 order.Customer.Location.ToString(),
-                (distance * 2).ToString(),
+                totalDistance.ToString(),
             };
 
             var tableMenuItem = new TableMenuItem(actionItem, tableData);

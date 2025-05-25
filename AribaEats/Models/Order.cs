@@ -20,7 +20,7 @@ public class Order
     public string CustomerId { get; set; }
     public string RestaurantId { get; set; }
     public string? DelivererId { get; set; }
-    public double Rating { get; set; }
+    public List<Rating> Rating { get; set; } = new();
     public OrderStatus Status { get; set; } = OrderStatus.Draft;
     public DateTime OrderTime { get; set; }
     public decimal TotalAmount => OrderItems?.Sum(item => item.CalculateSubtotal()) ?? 0;
@@ -29,7 +29,7 @@ public class Order
     // Navigation properties
     public Customer Customer { get; set; }
     public Restaurant Restaurant { get; set; }
-    public  Deliverer Deliverer { get; set; } 
+    public  Deliverer? Deliverer { get; set; } 
     public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
     public void AddItem(RestaurantMenuItem menuItem, int quantity)

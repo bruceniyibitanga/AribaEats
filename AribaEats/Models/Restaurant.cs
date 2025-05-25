@@ -10,8 +10,8 @@ public class Restaurant
     public string ClientId { get; set; }
     public string Name { get; set; }
     public string Style { get; set; }
-    public double? Rating { get; set; }
-
+    public double? Rating => Ratings.Count > 0 ? Ratings.Average(r => r.Score) : null;
+    public List<Rating> Ratings { get; set; } = new();
     public Location Location { get; set; }
     public List<RestaurantMenuItem> MenuItems { get; private set; } = new List<RestaurantMenuItem>();
     public List<Order> Orders { get; private set; } = new List<Order>();
@@ -19,12 +19,11 @@ public class Restaurant
     public Restaurant()
     {
     }
-    public Restaurant(string name, string style, double rating, string id, Location location)
+    public Restaurant(string name, string style, Location location)
     {
         Id = Guid.NewGuid().ToString();
         Name = name;
         Style = style;
-        Rating = rating;
         MenuItems = new List<RestaurantMenuItem>();
         Location = location;
     }

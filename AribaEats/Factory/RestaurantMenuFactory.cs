@@ -103,7 +103,7 @@ public class RestaurantMenuFactory : IRestaurantMenuFactory
 
     public IMenu CreateSelectOrderToCookScreen(MenuNavigator navigator, Client client)
     {
-        var readyOrder = _orderManager.GetOrdersReadyForCooking(client.Restaurant.Id);
+        var readyOrder = _orderManager.GetOrdersReadyForCooking(client.Restaurant.Id).OrderBy(x => int.Parse(x.Id));
         var menuItems = new List<IMenuItem>();
 
         foreach (var order in readyOrder)
@@ -122,7 +122,7 @@ public class RestaurantMenuFactory : IRestaurantMenuFactory
 
     public IMenu CreateOrderFinishedCookingScreen(MenuNavigator navigator, Client client)
     {
-        var cookingOrders = _restaurantManager.GetRestaurantOrdersInCooking(client.Restaurant);
+        var cookingOrders = _restaurantManager.GetRestaurantOrdersInCooking(client.Restaurant).OrderBy(x => int.Parse(x.Id));
         var menuItems = new List<IMenuItem>();
         foreach (var order in cookingOrders)
         {
@@ -131,8 +131,10 @@ public class RestaurantMenuFactory : IRestaurantMenuFactory
                 _orderManager.UpdateStatusOfOrder(order, client.Restaurant);
 
                 Console.WriteLine($"Order #{order.Id} is now ready for collection.");
+                
+                if(order.Deliverer == null) Console.WriteLine("No deliverer has been assigned yet.");
 
-                CreateDelivererArrivedScreen(navigator, client);
+                CreateDelivererArrivedScreen(navigator, client, order);
             }));
         }
 
@@ -140,37 +142,29 @@ public class RestaurantMenuFactory : IRestaurantMenuFactory
         return new ConsoleMenu("Select an order once you have finished preparing it:", menuItems.ToArray());
     }
 
-    public IMenu CreateDelivererArrivedScreen(MenuNavigator navigator, Client client)
+    public IMenu CreateDelivererArrivedScreen(MenuNavigator navigator, Client client, Order cookedOrder)
     {
         var assignedOrders = _orderManager.GetAllAssignedOrders(client.Restaurant); // Dictionary<Deliverer, Order>
         var menuItems = new List<IMenuItem>();
 
-        if (assignedOrders.Count == 0)
+        foreach (var entry in assignedOrders)
         {
-            Console.WriteLine("No deliverer has been assigned yet.");
-            navigator.NavigateHome("client");
-        }
-        else
-        {
-            foreach (var entry in assignedOrders)
+            var deliverer = entry.Key;
+            var order = entry.Value;
+
+            if (cookedOrder.Id == order.Id && deliverer.Status == DelivererStatus.ArrivedAtRestaurant)
             {
-                var deliverer = entry.Key;
-                var order = entry.Value;
-
-                if (deliverer.Status == DelivererStatus.ArrivedAtRestaurant)
-                {
-                    Console.WriteLine(
-                        $"Please take it to the deliverer with licence plate {deliverer.LicencePlate}, who is waiting to collect it.");
-                }
-                else
-                {
-                    Console.WriteLine(
-                        $"The deliverer with licence plate {deliverer.LicencePlate} will be arriving soon to collect it.");
-                }
+                Console.WriteLine(
+                    $"Please take it to the deliverer with licence plate {deliverer.LicencePlate}, who is waiting to collect it.");
             }
-
-            navigator.NavigateHome("client");
+            else if (cookedOrder.Id == order.Id && deliverer.Status != DelivererStatus.ArrivedAtRestaurant)
+            {
+                Console.WriteLine(
+                    $"The deliverer with licence plate {deliverer.LicencePlate} will be arriving soon to collect it.");
+            }
         }
+
+        navigator.NavigateHome("client");
         return new ConsoleMenu("", menuItems.ToArray(), showRowNumbers:false, showLastPrompt:false);
     }
 
@@ -181,11 +175,11 @@ public class RestaurantMenuFactory : IRestaurantMenuFactory
             .Where(entry => entry.Key.Status == DelivererStatus.ArrivedAtRestaurant)
             .ToList();
 
-        if (arrivedOrders.Count == 0)
-        {
-            Console.WriteLine("No deliverer has arrived yet.");
-            navigator.NavigateHome("client");
-        }
+        // if (arrivedOrders.Count == 0)
+        // {
+        //     Console.WriteLine("No deliverer has arrived yet.");
+        //     navigator.NavigateHome("client");
+        // }
 
         Console.WriteLine("These deliverers have arrived and are waiting to collect orders.");
         
@@ -195,7 +189,9 @@ public class RestaurantMenuFactory : IRestaurantMenuFactory
         {
             var deliverer = arrivedOrders[i].Key;
             var order = arrivedOrders[i].Value;
-
+            
+            if(order.Status == OrderStatus.PickedUp) continue;
+            
             menuItems.Add(new ActionMenuItem(
             $"Order #{order.Id} for {order.Customer.Name} (Deliverer license plate: {deliverer.LicencePlate}) (Order status: {order.Status})"
             , () =>

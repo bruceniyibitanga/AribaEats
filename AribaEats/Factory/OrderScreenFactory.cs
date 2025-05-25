@@ -19,10 +19,9 @@ public class OrderScreenFactory
     // Procesing Order Screen - Allows to add menu items to their order or cancel
     public IMenu CreateOrderProcessingScreen(MenuNavigator navigator, Customer customer, Restaurant restaurant)
     {
-        if (!SessionState.HasVisitedRestaurant(customer.Id, restaurant.Id))
+        if (!SessionState.HasVisitedRestaurant)
         {
             Console.WriteLine($"Placing order from {restaurant.Name}.");
-            SessionState.MarkRestaurantVisited(customer.Id, restaurant.Id);
         }
 
         navigator.SetAnchor();
@@ -33,7 +32,26 @@ public class OrderScreenFactory
             {
                 navigator.NavigateTo(CreateRestarantMenuViewScreen(navigator, customer, restaurant));
             }),
-            new ActionMenuItem("See reviews for this restaurant", () => { }),
+            new ActionMenuItem("See reviews for this restaurant", () =>
+            {
+                var reviews = _restaurantManager.GetRestaurantReviews(restaurant);
+                int siglePrintStatment = 1;
+                foreach (var review in reviews)
+                {
+                    Console.Write($"Reviewer: {review.CustomerName}");
+                    for (int i = 0; i < siglePrintStatment; i++)
+                    {
+                        Console.Write($"\nRating: ");
+                        for (int j = 0; j < review.Score; j++)
+                        {
+                            Console.Write("*");
+                        }
+                        Console.Write("\n");
+                    }
+                    Console.WriteLine($"Comment: {review.Comment}\n");
+                }
+                
+            }),
             new ActionMenuItem("Return to main menu", () => { navigator.NavigateHome("customer"); }),
         });
     }

@@ -34,6 +34,11 @@ public class RestaurantManager
         return restaurant.GetAllOrdersThatAreCooking();
     }
 
+    public List<Rating> GetRestaurantReviews(Restaurant restaurant)
+    {
+        return restaurant.Ratings;
+    }
+
     public List<Order> GetAllorderThatAreReadyForDelivery(Restaurant restaurant)
     {
         return restaurant.GetAllorderThatAreReadyForDelivery(restaurant);

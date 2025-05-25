@@ -23,7 +23,7 @@ namespace AribaEats.Models
         public string Email { get; set; }
         public string Mobile { get; set; }
         public string Password { get; set; }
-        public Location Location { get; set; }
+        public Location Location { get; set; } = new Location(0, 0);
         public DelivererStatus Status { get; set; } = DelivererStatus.Free;
         public string LicencePlate { get; set; }
         List<Order> orders = new List<Order>();

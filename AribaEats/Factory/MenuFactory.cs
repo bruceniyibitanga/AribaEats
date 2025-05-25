@@ -179,22 +179,70 @@ public class MenuFactory : IMenuFactory
     
     private IMenu CreateRateRestaurantOrderedFromMenu(MenuNavigator navigator, Customer customer, OrderManager orderManager)
     {
-        List<Order> previousOrderedList = _orderManager.GetCustomerOrderHistory(customer);
+        List<Order> previousOrderedList = _orderManager.GetCustomerOrderHistory(customer)
+            .Where(order => order.Status == OrderStatus.Delivered)
+            .Where(order => !order.Rating.Any(r => r.CustomerName == customer.Name))
+            .ToList();
+
     
         var menuItems = new List<IMenuItem>();
+        
     
-        foreach (var item in previousOrderedList)
+        for (var i = 0; i < previousOrderedList.Count; i++)
         {
-            menuItems.Add(new ActionMenuItem($"Order #{item.Id} from {item.Restaurant.Name}", () =>
+            int capturedIndex = i; // capture loop variable safely
+            menuItems.Add(new ActionMenuItem($"Order #{previousOrderedList[capturedIndex].Id} from {previousOrderedList[capturedIndex].Restaurant.Name}", () =>
             {
-                Console.WriteLine($"You are rating order #{item.Id} from {item.Restaurant.Name}");
+                var order = previousOrderedList[capturedIndex];
+                Console.WriteLine($"You are rating order #{order.Id} from {order.Restaurant.Name}:");
+
+                foreach (var item in order.OrderItems)
+                {
+                    Console.WriteLine($"{item.Quantity} x {item.RestaurantMenuItem.Name}");
+                }
+                
+                int rating = -1;
+                while (true)
+                {
+                    Console.WriteLine("Please enter a rating for this restaurant (1-5, 0 to cancel):");
+                    string input = Console.ReadLine();
+                    if (int.TryParse(input, out rating) && rating >= 0 && rating <= 5)
+                        break;
+
+                    Console.WriteLine("Invalid rating.");
+                }
+
+                if (rating == 0)
+                {
+                    navigator.NavigateBack();
+                    return;
+                }
+
+                Console.WriteLine("Please enter a comment to accompany this rating:");
+                string comment = Console.ReadLine();
+
+                // Save rating
+                var newRating = new Rating
+                {
+                    Score = rating,
+                    CustomerName = customer.Name,
+                    Comment = comment,
+                    Order = previousOrderedList[capturedIndex],
+                    OrderId = previousOrderedList[capturedIndex].Id,
+                    Restaurant = previousOrderedList[capturedIndex].Restaurant,
+                    RestaurantId = previousOrderedList[capturedIndex].Restaurant.Id
+                };
+                
+                previousOrderedList[capturedIndex].Restaurant.Ratings.Add(newRating);
+                if (previousOrderedList[capturedIndex].Id == order.Id) previousOrderedList[capturedIndex].Rating.Add(newRating);
+
+                Console.WriteLine($"Thank you for rating {previousOrderedList[capturedIndex].Restaurant.Name}.");
+
+                navigator.NavigateHome("customer");
+                
             }));
-            foreach (var food in item.OrderItems)
-            {
-                Console.WriteLine($"{food.Quantity} x {food.RestaurantMenuItem.Name}");
-            }
         }
-    
+        
         menuItems.Add(new BackMenuItem("Return to the previous menu", navigator));
         
         return new ConsoleMenu(
@@ -218,7 +266,7 @@ public class MenuFactory : IMenuFactory
             {
                 if (!_delivererManager.IsAvailable(deliverer))
                 {
-                    Console.WriteLine("You have already selected an order for delivery");
+                    Console.WriteLine("You have already selected an order for delivery.");
                     return;
                 };
                 
